@@ -1,10 +1,10 @@
 {
-  "version": "RC39",
+  "version": "RC40",
   "siteUrl": "https://factoryone.kr",
   "analytics": {
     "provider": "google_analytics_4",
-    "ga4MeasurementId": "",
-    "enabled": false,
+    "ga4MeasurementId": "G-5XTNS026KN",
+    "enabled": true,
     "debugOnLocalhost": true,
     "anonymizeIp": true
   },
