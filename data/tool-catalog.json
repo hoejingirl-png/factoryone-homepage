@@ -1,6 +1,6 @@
 {
-  "version": "RC38",
-  "count": 52,
+  "version": "RC41",
+  "count": 67,
   "tools": [
     {
       "id": "hourly-wage",
@@ -1564,6 +1564,111 @@
       "related": [
         "quick-unit",
         "living-cost"
+      ]
+    },
+    {
+      "id": "text-json-formatter",
+      "title": "JSON 정리·검증기",
+      "center": "문서·텍스트",
+      "url": "/tools/text/json-formatter/",
+      "image": "/assets/site-art/search-tools/json-formatter.svg",
+      "desc": "JSON 문자열을 보기 좋게 들여쓰기하고 문법 오류 위치를 확인합니다.",
+      "aliases": [
+        "JSON 포맷터",
+        "JSON 정리 검증기"
+      ],
+      "keywords": [
+        "JSON 정리",
+        "JSON 검증",
+        "무료 웹도구"
+      ],
+      "related": [
+        "text-keyboard-converter",
+        "text-cleaner"
+      ]
+    },
+    {
+      "id": "text-url-encoder",
+      "title": "URL 인코딩·디코딩",
+      "center": "문서·텍스트",
+      "url": "/tools/text/url-encoder/",
+      "image": "/assets/site-art/search-tools/url-encoder.svg",
+      "desc": "한글·공백·특수문자를 URL용 문자열로 인코딩하거나 원래 텍스트로 복원합니다.",
+      "aliases": [
+        "URL 인코더",
+        "URL 인코딩 디코딩"
+      ],
+      "keywords": [
+        "URL 인코딩",
+        "URL 디코딩",
+        "무료 웹도구"
+      ],
+      "related": [
+        "text-keyboard-converter",
+        "text-cleaner"
+      ]
+    },
+    {
+      "id": "text-base64",
+      "title": "Base64 인코딩·디코딩",
+      "center": "문서·텍스트",
+      "url": "/tools/text/base64/",
+      "image": "/assets/site-art/search-tools/base64.svg",
+      "desc": "텍스트를 Base64로 인코딩하거나 Base64 문자열을 UTF-8 텍스트로 복원합니다.",
+      "aliases": [
+        "Base64 변환기",
+        "Base64 인코딩 디코딩"
+      ],
+      "keywords": [
+        "Base64 인코딩",
+        "Base64 디코딩",
+        "무료 웹도구"
+      ],
+      "related": [
+        "text-keyboard-converter",
+        "text-cleaner"
+      ]
+    },
+    {
+      "id": "text-uuid-generator",
+      "title": "UUID 생성기",
+      "center": "문서·텍스트",
+      "url": "/tools/text/uuid-generator/",
+      "image": "/assets/site-art/search-tools/uuid-generator.svg",
+      "desc": "브라우저에서 UUID v4를 한 번에 여러 개 생성하고 바로 복사합니다.",
+      "aliases": [
+        "UUID 생성기",
+        "UUID 생성기"
+      ],
+      "keywords": [
+        "UUID v4",
+        "일괄 생성",
+        "무료 웹도구"
+      ],
+      "related": [
+        "text-keyboard-converter",
+        "text-cleaner"
+      ]
+    },
+    {
+      "id": "text-password-generator",
+      "title": "랜덤 비밀번호 생성기",
+      "center": "문서·텍스트",
+      "url": "/tools/text/password-generator/",
+      "image": "/assets/site-art/search-tools/password-generator.svg",
+      "desc": "길이와 문자 종류를 선택해 브라우저에서 강한 랜덤 비밀번호를 생성합니다.",
+      "aliases": [
+        "비밀번호 생성기",
+        "랜덤 비밀번호 생성기"
+      ],
+      "keywords": [
+        "길이 설정",
+        "암호학적 난수",
+        "무료 웹도구"
+      ],
+      "related": [
+        "text-keyboard-converter",
+        "text-cleaner"
       ]
     }
   ]

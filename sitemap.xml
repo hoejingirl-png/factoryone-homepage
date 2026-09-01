@@ -364,4 +364,9 @@
     <loc>https://factoryone.kr/tools/unit/temperature/</loc>
     <lastmod>2026-09-01</lastmod>
   </url>
+  <url><loc>https://factoryone.kr/tools/text/json-formatter/</loc></url>
+  <url><loc>https://factoryone.kr/tools/text/url-encoder/</loc></url>
+  <url><loc>https://factoryone.kr/tools/text/base64/</loc></url>
+  <url><loc>https://factoryone.kr/tools/text/uuid-generator/</loc></url>
+  <url><loc>https://factoryone.kr/tools/text/password-generator/</loc></url>
 </urlset>
