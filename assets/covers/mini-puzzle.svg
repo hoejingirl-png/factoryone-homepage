@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560">
+<rect width="900" height="560" fill="#eeece6"/>
+<rect x="30" y="30" width="840" height="500" fill="#f8f7f3" stroke="#c9c5bc"/>
+<text x="65" y="82" font-family="Arial,sans-serif" font-size="16" letter-spacing="3" fill="#77736b">FACTORY ONE · 게임</text>
+<rect x="220" y="205" width="460" height="210" rx="80" fill="none" stroke="#171717" stroke-width="16"/><path d="M320 275 V345 M285 310 H355" stroke="#171717" stroke-width="16" stroke-linecap="round"/><circle cx="565" cy="285" r="18" fill="#171717"/><circle cx="610" cy="335" r="18" fill="#171717"/>
+<text x="65" y="505" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#171717">미니 퍼즐</text>
+</svg>

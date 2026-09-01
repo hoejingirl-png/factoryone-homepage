@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560">
+<rect width="900" height="560" fill="#171717"/>
+<rect x="30" y="30" width="840" height="500" fill="#242424" stroke="#4a4a4a"/>
+<text x="65" y="82" font-family="Arial" font-size="16" letter-spacing="3" fill="#aaa">FACTORY ONE · CLASSIC GAMES</text>
+<text x="450" y="292" text-anchor="middle" font-family="Arial" font-size="78" font-weight="700" fill="#f1efe8">FPS</text>
+<text x="65" y="470" font-family="Arial" font-size="29" font-weight="700" fill="#f1efe8">Freedoom</text>
+<text x="65" y="505" font-family="Arial" font-size="15" fill="#aaa">OPEN GAME CONTENT</text>
+</svg>

@@ -1,0 +1,15 @@
+{
+  "version": "RC39",
+  "siteUrl": "https://factoryone.kr",
+  "analytics": {
+    "provider": "google_analytics_4",
+    "ga4MeasurementId": "",
+    "enabled": false,
+    "debugOnLocalhost": true,
+    "anonymizeIp": true
+  },
+  "searchVerification": {
+    "googleSearchConsole": "",
+    "naverSearchAdvisor": ""
+  }
+}

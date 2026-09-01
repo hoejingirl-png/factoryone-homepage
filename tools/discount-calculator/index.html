@@ -1,0 +1,11 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>할인 계산기 | 무료 웹도구 - Factory One</title><meta name="description" content="정가, 할인율, 쿠폰금액을 입력해 최종 결제금액과 절약금액을 계산합니다."><link rel="stylesheet" href="../../style.css"><meta name="robots" content="index,follow"><link rel="canonical" href="https://factoryone.kr/tools/discount-calculator/"><meta property="og:site_name" content="Factory One"><meta property="og:title" content="할인 계산기 | 무료 웹도구 - Factory One"><meta property="og:description" content="정가, 할인율, 쿠폰금액을 입력해 최종 결제금액과 절약금액을 계산합니다."><meta property="og:type" content="website"><meta property="og:url" content="https://factoryone.kr/tools/discount-calculator/"><script src="/assets/analytics.js" defer></script></head><body><div class="wrap"><header>
+<div class="logo" onclick="location.href='../../index.html'">FACTORY ONE</div>
+<div class="nav">
+<a href="../../programs/">PROGRAM</a>
+<a href="../../lisp/">LISP</a>
+<a href="../../tools/">TOOLS</a>
+<a href="../../games/">GAMES</a>
+<a href="../../apps/">APPS</a>
+</div>
+</header><main class="toolShell"><section class="toolHero"><div><div class="breadcrumbs">홈 · 웹도구 · 할인 계산기</div><h1>할인 계산기</h1><p>정가, 할인율, 쿠폰금액을 입력해 최종 결제금액과 절약금액을 계산합니다.</p></div></section>
+<section class="panel"><div class="fieldGrid three"><div class="field2"><label>정가</label><input id="price" type="number" value="100000" min="0"></div><div class="field2"><label>할인율(%)</label><input id="rate" type="number" value="20" min="0" max="100"></div><div class="field2"><label>추가 쿠폰(원)</label><input id="coupon" type="number" value="0" min="0"></div></div><div class="resultCard"><div class="resultBig" id="final">-</div><div class="resultSub" id="detail">값을 입력하세요.</div></div></section></main></div><script>function calc(){const p=Math.max(0,Number(price.value)||0),r=Math.min(100,Math.max(0,Number(rate.value)||0)),c=Math.max(0,Number(coupon.value)||0),after=Math.max(0,p*(1-r/100)-c),save=p-after;final.textContent=after.toLocaleString()+'원';detail.textContent=`총 ${save.toLocaleString()}원 절약 · 실제 할인율 ${p?((save/p)*100).toFixed(1):0}%`;};[price,rate,coupon].forEach(x=>x.oninput=calc);calc();</script><script src="/assets/tool-discovery.js"></script></body></html>

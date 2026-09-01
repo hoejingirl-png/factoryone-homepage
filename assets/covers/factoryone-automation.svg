@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560">
+<rect width="900" height="560" fill="#eeece6"/>
+<rect x="30" y="30" width="840" height="500" fill="#f8f7f3" stroke="#c9c5bc"/>
+<text x="65" y="82" font-family="Arial,sans-serif" font-size="16" letter-spacing="3" fill="#77736b">FACTORY ONE · 프로그램</text>
+<rect x="170" y="135" width="560" height="310" fill="none" stroke="#171717" stroke-width="14"/><rect x="170" y="135" width="560" height="54" fill="#171717"/><circle cx="205" cy="162" r="8" fill="#f8f7f3"/><circle cx="235" cy="162" r="8" fill="#f8f7f3"/><circle cx="265" cy="162" r="8" fill="#f8f7f3"/><path d="M235 245 H665 M235 305 H565 M235 365 H615" stroke="#171717" stroke-width="12"/>
+<text x="65" y="505" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#171717">Factory One 자동화</text>
+</svg>

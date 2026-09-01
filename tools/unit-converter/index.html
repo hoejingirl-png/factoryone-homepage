@@ -1,0 +1,48 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>단위 변환기 | 무료 웹도구 - Factory One</title><meta name="description" content="자주 검색하는 길이·무게·넓이·온도·속도·데이터 용량을 카테고리별로 바로 변환합니다."><link rel="canonical" href="https://factoryone.kr/tools/unit-converter/"><link rel="stylesheet" href="../../style.css"><meta name="robots" content="index,follow"><meta property="og:site_name" content="Factory One"><meta property="og:title" content="단위 변환기 | 무료 웹도구 - Factory One"><meta property="og:description" content="자주 검색하는 길이·무게·넓이·온도·속도·데이터 용량을 카테고리별로 바로 변환합니다."><meta property="og:type" content="website"><meta property="og:url" content="https://factoryone.kr/tools/unit-converter/"><script src="/assets/analytics.js" defer></script></head><body><div class="wrap"><header><div class="logo" onclick="location.href='../../index.html'">FACTORY ONE</div><div class="nav"><button onclick="location.href='../../index.html'">HOME</button><button onclick="location.href='../../index.html'">TOOLS</button></div><input class="search" placeholder="SEARCH" disabled></header><main class="toolShell">
+<section class="toolHero"><div><div class="breadcrumbs">홈 · 무료 웹도구 · 단위 변환기</div><h1>단위 변환기</h1><p>자주 검색하는 길이·무게·넓이·온도·속도·데이터 용량을 카테고리별로 바로 변환합니다.</p></div><div class="toolHeroMeta"><span class="toolBadge">길이</span><span class="toolBadge">무게</span><span class="toolBadge">넓이</span><span class="toolBadge">온도</span><span class="toolBadge">속도</span></div></section>
+<div class="toolLayout"><div class="toolMain"><section class="panel"><h2>빠른 변환</h2><div class="fieldGrid"><div class="field2"><label>카테고리</label><select id="cat"></select></div><div class="field2"><label>입력값</label><input id="val" type="number" step="any" value="1"></div></div><div class="converterRows" style="margin-top:14px"><div class="converterRow"><div class="field2"><label>변환 전</label><select id="from"></select></div><button class="converterSwap" id="swap">⇄</button><div class="field2"><label>변환 후</label><select id="to"></select></div></div></div><div class="resultCard"><div class="resultBig" id="convResult">-</div><div class="resultSub" id="formula">카테고리를 선택하세요.</div></div></section>
+<section class="panel"><h2>자주 찾는 빠른 변환</h2><div class="fieldGrid three" id="quick"></div></section></div><aside class="toolSide"><section class="panel"><h2>사용 팁</h2><p class="note">평↔㎡, 인치↔cm, kg↔lb처럼 자주 찾는 조합은 한 번 선택한 뒤 숫자만 바꾸면 즉시 계산됩니다.</p></section><section class="panel"><h2>다른 무료 도구</h2><div class="sideList"><a href="../shoe-size-converter/">신발 사이즈 변환기<small>무료 웹도구 바로가기</small></a><a href="../living-cost-calculator/">월 생활비 계산기<small>무료 웹도구 바로가기</small></a><a href="../lotto-generator/">로또 번호 생성기<small>무료 웹도구 바로가기</small></a></div></section></aside></div>
+<section class="commentsSection">
+  <div class="commentsHead">
+    <div><h2>댓글 · 사용후기</h2></div>
+    <p>질문이나 사용 후기를 남겨주세요.<br>현재 댓글은 GitHub 계정 로그인이 필요합니다.</p>
+  </div>
+  <div class="commentsBox">
+    <div class="commentsLocalNote">로컬 미리보기에서는 댓글이 정상 표시되지 않을 수 있습니다. 실제 factoryone.kr 배포 후 사용합니다.</div>
+    <script src="https://utteranc.es/client.js"
+            repo="hoejingri-png/factoryone-homepage"
+            issue-term="pathname"
+            label="웹도구 댓글"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+</section>
+
+</main></div>
+<script>
+const defs={
+length:{label:'길이',units:{m:['m',1],cm:['cm',0.01],mm:['mm',0.001],inch:['inch',0.0254],ft:['ft',0.3048],km:['km',1000]}},
+weight:{label:'무게',units:{kg:['kg',1],g:['g',0.001],lb:['lb',0.45359237],oz:['oz',0.028349523125]}},
+area:{label:'넓이',units:{m2:['㎡',1],py:['평',3.305785],ft2:['ft²',0.09290304],acre:['acre',4046.8564224]}},
+speed:{label:'속도',units:{kmh:['km/h',1],ms:['m/s',3.6],mph:['mph',1.609344]}},
+data:{label:'데이터',units:{B:['B',1],KB:['KB',1024],MB:['MB',1048576],GB:['GB',1073741824],TB:['TB',1099511627776]}}
+};
+cat.innerHTML=Object.entries(defs).map(([k,d])=>`<option value="${k}">${d.label}</option>`).join('')+'<option value="temp">온도</option>';
+function fill(){
+ const c=cat.value;
+ if(c==='temp'){from.innerHTML='<option value="C">℃</option><option value="F">℉</option>';to.innerHTML='<option value="F">℉</option><option value="C">℃</option>';return;}
+ const u=defs[c].units;from.innerHTML=Object.entries(u).map(([k,v])=>`<option value="${k}">${v[0]}</option>`).join('');to.innerHTML=from.innerHTML;to.selectedIndex=Math.min(1,to.options.length-1);
+}
+function calc(){
+ let x=Number(val.value);if(!Number.isFinite(x))return;
+ if(cat.value==='temp'){let y=from.value==='C'&&to.value==='F'?x*9/5+32:from.value==='F'&&to.value==='C'?(x-32)*5/9:x;convResult.textContent=y.toLocaleString('ko-KR',{maximumFractionDigits:6})+' '+to.options[to.selectedIndex].text;formula.textContent=`${x} ${from.options[from.selectedIndex].text} → ${to.options[to.selectedIndex].text}`;return;}
+ let u=defs[cat.value].units,y=x*u[from.value][1]/u[to.value][1];convResult.textContent=y.toLocaleString('ko-KR',{maximumFractionDigits:6})+' '+u[to.value][0];formula.textContent=`${x} ${u[from.value][0]} → ${u[to.value][0]}`;
+}
+[cat,val,from,to].forEach(el=>el.addEventListener('input',()=>{if(el===cat)fill();calc();}));
+swap.onclick=()=>{let a=from.value;from.value=to.value;to.value=a;calc();};
+quick.innerHTML=[['평 → ㎡','area','py','m2',10],['인치 → cm','length','inch','cm',32],['kg → lb','weight','kg','lb',70],['℃ → ℉','temp','C','F',25],['km/h → mph','speed','kmh','mph',100],['GB → MB','data','GB','MB',1]].map(([n,c,f,t,v])=>`<button class="secondaryBtn q" data-c="${c}" data-f="${f}" data-t="${t}" data-v="${v}">${n}</button>`).join('');
+document.querySelectorAll('.q').forEach(b=>b.onclick=()=>{cat.value=b.dataset.c;fill();from.value=b.dataset.f;to.value=b.dataset.t;val.value=b.dataset.v;calc();});
+fill();calc();
+</script><script src="/assets/tool-discovery.js"></script></body></html>

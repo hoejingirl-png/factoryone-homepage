@@ -1,0 +1,49 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>월급 계산기 - 시급 월급 환산·209시간 비교 | 무료 웹도구 - Factory One</title><meta name="description" content="시급과 주 근로시간, 유급주휴시간을 입력해 월 정규임금·주휴임금·연장근로·연 예상액을 나눠 계산하고 209시간 기준과 비교합니다.">
+<link rel="canonical" href="https://factoryone.kr/tools/salary/monthly-pay/"><link rel="stylesheet" href="../../../style.css"><meta name="robots" content="index,follow"><meta property="og:site_name" content="Factory One"><meta property="og:title" content="월급 계산기 - 시급 월급 환산·209시간 비교 | 무료 웹도구 - Factory One"><meta property="og:description" content="시급과 주 근로시간, 유급주휴시간을 입력해 월 정규임금·주휴임금·연장근로·연 예상액을 나눠 계산하고 209시간 기준과 비교합니다."><meta property="og:type" content="website"><meta property="og:url" content="https://factoryone.kr/tools/salary/monthly-pay/"><script src="/assets/analytics.js" defer></script></head>
+<body><div class="wrap"><header class="siteHeader">
+<div class="logo" onclick="location.href='../../../index.html'">FACTORY <span>ONE</span></div>
+<nav class="nav"><a href="../../../index.html">HOME</a><a href="../../../programs/">PROGRAM</a><a href="../../../lisp/">LISP</a><a href="../../../apps/">APPS</a><a class="active" href="../../../tools/">TOOLS</a><a href="../../../games/">GAMES</a></nav>
+<a class="headerToolLink" href="../../">도구 찾기</a></header><main class="toolArticle">
+<div class="breadcrumbs"><a href="../../">TOOLS</a> / <a href="../">급여·근무 센터</a> / 월급 계산기 - 시급 월급 환산·209시간 비교</div>
+<section class="richToolHero"><div><div class="eyebrow">SALARY · RICH CALCULATOR</div><h1>월급 계산기 - 시급 월급 환산·209시간 비교</h1><p>시급과 주 근로시간, 유급주휴시간을 입력해 월 정규임금·주휴임금·연장근로·연 예상액을 나눠 계산하고 209시간 기준과 비교합니다.</p><div class="richBadges"><span>2026 최저임금 기본값</span><span>209시간 비교</span><span>연장근로 별도 표시</span></div></div><img src="../../../assets/covers/monthly-pay.svg" alt="월급 계산기 - 시급 월급 환산·209시간 비교 대표 이미지"></section>
+<section class="richCalc"><div class="richCalcHead"><div><span>MONTHLY PAY ESTIMATOR</span><h2>월급 환산 조건</h2></div><div class="richCalcActions"><button class="richBtn ghost" id="preset209">209시간 기준</button><button class="richBtn ghost" id="resetBtn">초기화</button><button class="richBtn" id="copyBtn">결과 복사</button></div></div>
+<div class="richInputs">
+<label><span>시급</span><div class="richInputUnit"><input id="wage" type="number" min="0" value="10320"><b>원</b></div><small>2026 최저임금 기본값</small></label>
+<label><span>주 소정근로시간</span><div class="richInputUnit"><input id="weekly" type="number" min="0" max="40" step=".5" value="40"><b>시간</b></div><small>계약상 정규 근로시간</small></label>
+<label><span>주 유급주휴시간</span><div class="richInputUnit"><input id="holiday" type="number" min="0" max="8" step=".1" value="8"><b>시간</b></div><small>직접 조정 가능</small></label>
+<label><span>월 평균 주수</span><div class="richInputUnit"><input id="weeks" type="number" min="1" max="6" step=".001" value="4.345"><b>주</b></div><small>365일÷7÷12 ≈ 4.345주</small></label>
+<label><span>월 추가 연장근로</span><div class="richInputUnit"><input id="ot" type="number" min="0" step=".5" value="0"><b>시간</b></div><small>간편 계산용 별도 입력</small></label>
+<label><span>연장근로 배율</span><div class="richInputUnit"><input id="otRate" type="number" min="1" step=".1" value="1.5"><b>배</b></div><small>적용 여부는 근로조건에 따라 다름</small></label>
+</div>
+<div class="richResults"><div class="richResultsTop"><span>ESTIMATED REPORT</span><b id="status">월 예상급여</b></div><div class="richResultGrid">
+<div class="richMetric"><span>월 정규근로 임금</span><strong id="regular">-</strong><small id="regularHours">-</small></div>
+<div class="richMetric"><span>월 주휴 임금</span><strong id="holidayPay">-</strong><small id="holidayHours">-</small></div>
+<div class="richMetric"><span>월 연장근로 임금</span><strong id="otPay">-</strong><small id="otHours">-</small></div>
+<div class="richMetric"><span>월 예상 총액</span><strong id="total">-</strong><small>세전·공제 전 단순 환산</small></div>
+<div class="richMetric"><span>연 예상 총액</span><strong id="annual">-</strong><small>월 예상 총액 × 12</small></div>
+<div class="richMetric"><span>월 유급시간 합계</span><strong id="paidHours">-</strong><small>정규 + 주휴 + 연장환산 전 시간</small></div>
+<div class="richMetric"><span>공식 209시간 기준 비교</span><strong id="official209">-</strong><small>시급 × 209시간</small></div>
+<div class="richMetric"><span>차이</span><strong id="diff">-</strong><small>현재 조건과 209시간 기준 차이</small></div>
+</div><div class="richVisualBar"><i id="bar" style="width:0%"></i></div></div></section>
+<div class="richNotice">이 계산기는 세전 급여의 간편 환산용입니다. 실제 급여에는 근로계약, 주휴 적용 여부, 연장·야간·휴일근로, 각종 수당, 세금·4대보험 등이 영향을 줄 수 있습니다.</div>
+<div class="richExplain"><section><h2>사용방법</h2><ol><li>시급과 주 소정근로시간을 입력합니다.</li><li>계약에 맞는 주 유급주휴시간을 확인해 입력합니다.</li><li>필요하면 월 연장근로시간과 배율을 추가합니다.</li><li>월 정규임금, 주휴임금, 연장임금과 총액을 따로 확인합니다.</li></ol></section><section><h2>계산 기준</h2><div class="richFormula">월 정규임금 = 시급 × 주 소정근로시간 × 월 평균 주수<br>월 주휴임금 = 시급 × 주 유급주휴시간 × 월 평균 주수<br>209시간 비교 = 시급 × 209</div><p>2026년 최저임금 10,320원, 주 40시간·월 209시간 기준 월 환산액은 2,156,880원입니다. 209시간은 고시상 비교 기준으로 제공하며 개인 근무형태와 항상 같지는 않습니다.</p></section></div>
+<div class="richExplain"><section><h2>실제 사용 예시</h2><p>시급 10,320원, 주 40시간, 주휴 8시간을 월 209시간에 맞춰 계산하면 약 215만 6,880원 수준이 됩니다. 여기에 별도 연장근로가 있다면 입력한 시간과 배율에 따라 추가 금액을 분리해서 확인할 수 있습니다.</p></section><section><h2>자주 묻는 질문</h2><h3>실수령액도 나오나요?</h3><p>아니요. 세금과 4대보험 공제 전 예상액입니다.</p><h3>209시간을 꼭 써야 하나요?</h3><p>주 40시간·유급주휴 8시간의 대표 환산 기준입니다. 교대제·단시간근로 등은 실제 유급시간이 달라질 수 있습니다.</p></section></div>
+<section class="richRelated"><div class="titleRow"><h2>같이 쓰면 좋은 도구</h2><span>RELATED TOOLS</span></div><div class="richRelatedGrid"><a href="../hourly-wage/"><b>시급 계산기</b><span>일·주·월 급여를 빠르게 비교</span></a><a href="../weekly-holiday/"><b>주휴수당 계산기</b><span>주휴 적용 여부와 시간 확인</span></a><a href="../work-hours/"><b>근무시간 계산기</b><span>휴게시간을 뺀 실제 근무시간 계산</span></a></div></section>
+</main></div><script>
+const $=id=>document.getElementById(id), won=n=>Math.round(n).toLocaleString('ko-KR')+'원';
+function calc(){
+ const w=+$('wage').value||0, wh=+$('weekly').value||0, hh=+$('holiday').value||0, wk=+$('weeks').value||0, ot=+$('ot').value||0, r=+$('otRate').value||1;
+ const rh=wh*wk, hmh=hh*wk, regular=w*rh, hp=w*hmh, otp=w*ot*r, total=regular+hp+otp, off=w*209;
+ $('regular').textContent=won(regular); $('regularHours').textContent=rh.toFixed(1)+'시간';
+ $('holidayPay').textContent=won(hp); $('holidayHours').textContent=hmh.toFixed(1)+'시간';
+ $('otPay').textContent=won(otp); $('otHours').textContent=ot.toFixed(1)+'시간 × '+r.toFixed(1);
+ $('total').textContent=won(total); $('annual').textContent=won(total*12); $('paidHours').textContent=(rh+hmh+ot).toFixed(1)+'시간';
+ $('official209').textContent=won(off); $('diff').textContent=(total-off>=0?'+':'')+won(total-off);
+ $('bar').style.width=Math.min(100,total/off*100||0)+'%';
+}
+document.querySelectorAll('.richCalc input').forEach(x=>x.addEventListener('input',calc));
+$('preset209').onclick=()=>{$('weekly').value=40;$('holiday').value=8;$('weeks').value=(209/48).toFixed(6);$('ot').value=0;calc()};
+$('resetBtn').onclick=()=>{$('wage').value=10320;$('weekly').value=40;$('holiday').value=8;$('weeks').value=4.345;$('ot').value=0;$('otRate').value=1.5;calc()};
+$('copyBtn').onclick=()=>navigator.clipboard?.writeText(`월 예상급여 ${$('total').textContent} / 연 예상 ${$('annual').textContent} / 월 유급시간 ${$('paidHours').textContent}`);
+calc();</script><script src="/assets/tool-discovery.js"></script></body></html>

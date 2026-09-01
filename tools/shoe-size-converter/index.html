@@ -1,0 +1,106 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>신발 사이즈 변환기 | 무료 웹도구 - Factory One</title>
+<meta name="description" content="한국 mm 기준을 US·EU·UK 사이즈로 빠르게 비교하고, 남성·여성·아동 전체 사이즈표까지 한 화면에서 확인합니다.">
+<link rel="canonical" href="https://factoryone.kr/tools/shoe-size-converter/"><link rel="stylesheet" href="../../style.css"><meta name="robots" content="index,follow"><meta property="og:site_name" content="Factory One"><meta property="og:title" content="신발 사이즈 변환기 | 무료 웹도구 - Factory One"><meta property="og:description" content="한국 mm 기준을 US·EU·UK 사이즈로 빠르게 비교하고, 남성·여성·아동 전체 사이즈표까지 한 화면에서 확인합니다."><meta property="og:type" content="website"><meta property="og:url" content="https://factoryone.kr/tools/shoe-size-converter/"><script src="/assets/analytics.js" defer></script></head>
+<body><div class="wrap"><header><div class="logo" onclick="location.href='../../index.html'">FACTORY ONE</div><div class="nav"><button onclick="location.href='../../index.html'">HOME</button><button onclick="location.href='../../index.html'">TOOLS</button></div><input class="search" placeholder="SEARCH" disabled></header><main class="toolShell">
+<section class="toolHero"><div><div class="breadcrumbs">홈 · 무료 웹도구 · 신발 사이즈 변환기</div><h1>신발 사이즈 변환기</h1><p>한국 mm 기준을 US·EU·UK 사이즈로 빠르게 비교하고, 남성·여성·아동 전체 사이즈표까지 한 화면에서 확인합니다.</p></div><div class="toolHeroMeta"><span class="toolBadge">남성</span><span class="toolBadge">여성</span><span class="toolBadge">아동</span><span class="toolBadge">전체 표 제공</span></div></section>
+<div class="toolLayout"><div class="toolMain">
+<section class="panel"><h2>빠른 사이즈 변환</h2>
+<div class="shoeInputRow">
+<div class="field2"><label for="gender">구분</label><select id="gender"><option value="men">남성</option><option value="women">여성</option><option value="kids">아동</option></select></div>
+<div class="field2"><label for="krInput">한국 신발 사이즈 입력</label><div class="sizeInputWrap"><input id="krInput" type="text" value="270" inputmode="numeric" autocomplete="off"><span>mm</span></div></div>
+<div class="field2"><label for="footcm">발 길이 참고</label><input id="footcm" readonly></div>
+</div>
+<div class="actionsRow"><button class="primaryBtn" id="convertBtn">변환하기</button><button class="secondaryBtn" id="minus5">- 5mm</button><button class="secondaryBtn" id="plus5">+ 5mm</button><button class="secondaryBtn" id="resetBtn">초기화</button></div>
+<div class="resultCard"><div class="resultBig" id="mainResult">270mm 기준을 표시합니다.</div><div class="resultSub" id="subResult">표에 없는 사이즈는 가장 가까운 5mm 기준값을 안내합니다.</div></div></section>
+
+<section class="panel"><h2>전체 신발 사이즈표</h2><div class="tabs"><button class="tabBtn active" data-tab="men">남성</button><button class="tabBtn" data-tab="women">여성</button><button class="tabBtn" data-tab="kids">아동</button></div>
+<div class="tableWrap"><table class="sizeTable"><thead><tr><th>한국(mm)</th><th>발길이(cm)</th><th>US</th><th>EU</th><th>UK</th></tr></thead><tbody id="sizeBody"></tbody></table></div>
+<p class="note">※ 국가·브랜드·제품 라스트에 따라 실제 표기가 다를 수 있습니다. 구매 전 브랜드 공식 사이즈표를 함께 확인하세요.</p></section>
+
+<section class="toolFooterInfo"><h2>신발 사이즈를 검색할 때 많이 헷갈리는 부분</h2><p>한국은 보통 mm 단위를 사용하지만 미국은 남성·여성 표기가 다르고, 유럽과 영국은 별도 체계를 사용합니다. 그래서 같은 발 길이라도 브랜드에 따라 US 또는 EU 표기가 달라질 수 있습니다.</p></section>
+</div><aside class="toolSide"><section class="panel"><h2>현재 변환 요약</h2><div class="analysisBox"><div class="analysisItem"><span>한국</span><strong id="sKr">-</strong></div><div class="analysisItem"><span>미국 US</span><strong id="sUs">-</strong></div><div class="analysisItem"><span>유럽 EU</span><strong id="sEu">-</strong></div><div class="analysisItem"><span>영국 UK</span><strong id="sUk">-</strong></div></div></section><section class="panel"><h2>다른 무료 도구</h2><div class="sideList"><a href="../living-cost-calculator/">월 생활비 계산기<small>무료 웹도구 바로가기</small></a><a href="../unit-converter/">단위 변환기<small>무료 웹도구 바로가기</small></a><a href="../lotto-generator/">로또 번호 생성기<small>무료 웹도구 바로가기</small></a></div></section></aside></div>
+
+<section class="commentsSection">
+  <div class="commentsHead">
+    <div><h2>댓글 · 사용후기</h2></div>
+    <p>질문이나 사용 후기를 남겨주세요.<br>현재 댓글은 GitHub 계정 로그인이 필요합니다.</p>
+  </div>
+  <div class="commentsBox">
+    <div class="commentsLocalNote">로컬 미리보기에서는 댓글이 정상 표시되지 않을 수 있습니다. 실제 factoryone.kr 배포 후 사용합니다.</div>
+    <script src="https://utteranc.es/client.js"
+            repo="hoejingri-png/factoryone-homepage"
+            issue-term="pathname"
+            label="웹도구 댓글"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+</section>
+
+</main></div>
+<script>
+const tables={
+men:[
+[230,23.0,5,36.5,4],[235,23.5,5.5,37.5,4.5],[240,24.0,6,38,5],[245,24.5,6.5,39,5.5],[250,25.0,7,40,6],[255,25.5,7.5,40.5,6.5],[260,26.0,8,41,7],[265,26.5,8.5,42,7.5],[270,27.0,9,42.5,8],[275,27.5,9.5,43,8.5],[280,28.0,10,44,9],[285,28.5,10.5,44.5,9.5],[290,29.0,11,45,10],[295,29.5,11.5,46,10.5],[300,30.0,12,46.5,11]],
+women:[
+[220,22.0,5.5,35,3],[225,22.5,6,36,3.5],[230,23.0,6.5,36.5,4],[235,23.5,7,37.5,4.5],[240,24.0,7.5,38,5],[245,24.5,8,39,5.5],[250,25.0,8.5,40,6],[255,25.5,9,40.5,6.5],[260,26.0,9.5,41,7],[265,26.5,10,42,7.5],[270,27.0,10.5,42.5,8],[275,27.5,11,43,8.5],[280,28.0,11.5,44,9]],
+kids:[
+[150,15.0,8.5,25,7.5],[160,16.0,9.5,26,8.5],[170,17.0,10.5,28,9.5],[180,18.0,11.5,29,10.5],[190,19.0,12.5,31,11.5],[200,20.0,1,32,13],[210,21.0,2,34,1],[220,22.0,3,35,2],[230,23.0,4,36.5,3]]
+]};
+const gender=document.getElementById('gender');
+const krInput=document.getElementById('krInput');
+const body=document.getElementById('sizeBody');
+
+function renderTable(type=gender.value){
+  body.innerHTML=tables[type].map(r=>`<tr data-kr="${r[0]}"><td>${r[0]}</td><td>${r[1].toFixed(1)}</td><td>${r[2]}</td><td>${r[3]}</td><td>${r[4]}</td></tr>`).join('');
+}
+
+function inputValue(){
+  const cleaned=String(krInput.value||'').replace(/[^0-9]/g,'');
+  if(!cleaned) return null;
+  return Number(cleaned);
+}
+function nearestRow(){
+  const value=inputValue();
+  if(value===null || !Number.isFinite(value)) return null;
+  return tables[gender.value].reduce((best,row)=>Math.abs(row[0]-value)<Math.abs(best[0]-value)?row:best, tables[gender.value][0]);
+}
+
+function convertSize(){
+  const row=nearestRow();
+  if(!row){
+    document.getElementById('mainResult').textContent='신발 사이즈를 숫자로 입력해 주세요.';
+    return;
+  }
+  const entered=inputValue();
+  document.getElementById('footcm').value=row[1].toFixed(1)+' cm';
+  document.getElementById('mainResult').textContent=`${entered}mm → US ${row[2]} · EU ${row[3]} · UK ${row[4]}`;
+  document.getElementById('subResult').textContent=entered===row[0]
+    ? '입력한 한국 사이즈의 참고 변환값입니다. 브랜드별 차이가 있을 수 있습니다.'
+    : `${entered}mm는 표에 없어 가장 가까운 ${row[0]}mm 기준으로 안내합니다.`;
+  document.getElementById('sKr').textContent=entered+'mm';
+  document.getElementById('sUs').textContent=row[2];
+  document.getElementById('sEu').textContent=row[3];
+  document.getElementById('sUk').textContent=row[4];
+  document.querySelectorAll('#sizeBody tr').forEach(x=>x.classList.toggle('highlight',Number(x.dataset.kr)===row[0]));
+}
+
+gender.addEventListener('change',()=>{renderTable();convertSize();});
+krInput.addEventListener('input',convertSize);
+krInput.addEventListener('keydown',e=>{if(e.key==='Enter')convertSize();});
+document.getElementById('convertBtn').addEventListener('click',convertSize);
+document.getElementById('minus5').addEventListener('click',()=>{krInput.value=Math.max(140,(inputValue()||270)-5);convertSize();});
+document.getElementById('plus5').addEventListener('click',()=>{krInput.value=Math.min(320,(inputValue()||270)+5);convertSize();});
+document.getElementById('resetBtn').addEventListener('click',()=>{gender.value='men';krInput.value=270;renderTable();convertSize();});
+document.querySelectorAll('.tabBtn').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.tabBtn').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');
+  gender.value=b.dataset.tab;
+  renderTable();
+  convertSize();
+}));
+renderTable();
+convertSize();
+</script><script src="/assets/tool-discovery.js"></script></body></html>

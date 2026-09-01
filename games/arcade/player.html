@@ -1,0 +1,189 @@
+<!doctype html><html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>내 ROM 실행 | Factory One Arcade</title>
+<link rel="stylesheet" href="../../style.css">
+<meta name="robots" content="noindex,follow"><script src="/assets/analytics.js" defer></script></head><body><div class="wrap"><header><div class="logo" onclick="location.href='../../index.html'">FACTORY ONE</div>
+<div class="nav"><a href="../../programs/">PROGRAM</a><a href="../../lisp/">LISP</a><a href="../../tools/">TOOLS</a><a href="../../games/">GAMES</a><a href="../../apps/">APPS</a></div></header>
+<main class="gameDetail">
+<section class="gameTitle">
+<div class="eyebrow">FACTORY ONE · ARCADE PLAYER</div>
+<h1>내 게임 파일 실행</h1>
+<p>사용자가 직접 보유한 아케이드 ROM ZIP 파일을 브라우저에서 선택해 실행합니다. 파일은 Factory One 서버로 업로드하지 않습니다.</p>
+</section>
+
+<section class="romPickerPanel">
+<div class="romPickerTop">
+  <div>
+    <b>게임 파일 선택</b>
+    <span>ZIP 형식 ROM 파일</span>
+  </div>
+  <input id="romFile" type="file" accept=".zip,application/zip">
+</div>
+<div class="romOptions">
+  <label>게임 이름 <input id="romTitle" placeholder="예: 내 아케이드 게임"></label>
+  <label>코어
+    <select id="romCore">
+      <option value="arcade">Arcade / FBNeo 자동</option>
+      <option value="fbneo">FBNeo</option>
+      <option value="cps1">CPS1</option>
+      <option value="cps2">CPS2</option>
+    </select>
+  </label>
+  <label class="saveToggle"><input id="saveRom" type="checkbox" checked> 다음 방문에도 이 브라우저에 저장</label>
+</div>
+<div class="romActions">
+  <button id="playSelected" class="primaryBtn">선택한 게임 실행</button>
+  <button id="playSaved" class="secondaryBtn">저장된 게임 실행</button>
+  <button id="clearSaved" class="secondaryBtn">저장된 게임 삭제</button>
+</div>
+<div id="romStatus" class="statusBox">ROM 파일을 선택하세요.</div>
+</section>
+
+<section class="gamePlayerShell">
+  <div id="game" class="arcadePlayerStage">
+    <div class="playerWaiting">
+      <b>READY</b>
+      <span>게임 파일을 선택하면 여기에 플레이어가 열립니다.</span>
+    </div>
+  </div>
+  <div class="gameToolbar">
+    <button onclick="document.documentElement.requestFullscreen?.()">전체화면</button>
+    <span id="playerStatus">플레이어 대기</span>
+  </div>
+</section>
+
+<section class="gameSpecs">
+  <div><span>실행 엔진</span><b>EmulatorJS</b></div>
+  <div><span>게임 파일</span><b>사용자 로컬 선택</b></div>
+  <div><span>저장 방식</span><b>IndexedDB</b></div>
+</section>
+
+<section class="panel">
+<h3>이 방식의 장점</h3>
+<p class="muted">Factory One이 상용 ROM을 배포하지 않아도 사용자가 합법적으로 보유한 파일을 직접 실행할 수 있습니다. 저장 옵션을 켜면 같은 브라우저에서 다음 방문에도 다시 파일을 고르지 않고 실행할 수 있습니다.</p>
+</section>
+</main></div>
+
+<script>
+const DB_NAME='factoryone_arcade';
+const STORE='roms';
+const KEY='last_rom';
+
+function openDB(){
+  return new Promise((resolve,reject)=>{
+    const req=indexedDB.open(DB_NAME,1);
+    req.onupgradeneeded=()=>{
+      const db=req.result;
+      if(!db.objectStoreNames.contains(STORE)) db.createObjectStore(STORE);
+    };
+    req.onsuccess=()=>resolve(req.result);
+    req.onerror=()=>reject(req.error);
+  });
+}
+
+async function saveToDB(data){
+  const db=await openDB();
+  await new Promise((resolve,reject)=>{
+    const tx=db.transaction(STORE,'readwrite');
+    tx.objectStore(STORE).put(data,KEY);
+    tx.oncomplete=resolve; tx.onerror=()=>reject(tx.error);
+  });
+  db.close();
+}
+
+async function readFromDB(){
+  const db=await openDB();
+  const result=await new Promise((resolve,reject)=>{
+    const tx=db.transaction(STORE,'readonly');
+    const req=tx.objectStore(STORE).get(KEY);
+    req.onsuccess=()=>resolve(req.result);
+    req.onerror=()=>reject(req.error);
+  });
+  db.close();
+  return result;
+}
+
+async function deleteFromDB(){
+  const db=await openDB();
+  await new Promise((resolve,reject)=>{
+    const tx=db.transaction(STORE,'readwrite');
+    tx.objectStore(STORE).delete(KEY);
+    tx.oncomplete=resolve; tx.onerror=()=>reject(tx.error);
+  });
+  db.close();
+}
+
+function startEmulator(fileData,name,title,core){
+  document.getElementById('game').innerHTML='';
+  const blob=new Blob([fileData],{type:'application/zip'});
+  const url=URL.createObjectURL(blob);
+
+  window.EJS_player='#game';
+  window.EJS_core=core||'arcade';
+  window.EJS_gameUrl=url;
+  window.EJS_gameName=title||name||'Arcade Game';
+  window.EJS_pathtodata='https://cdn.emulatorjs.org/stable/data/';
+  window.EJS_startOnLoaded=true;
+  window.EJS_disableDatabases=false;
+
+  document.getElementById('playerStatus').textContent='EmulatorJS 로딩 중...';
+  document.getElementById('romStatus').textContent=(title||name)+' 실행 준비중';
+
+  const old=document.getElementById('ejs-loader');
+  if(old) old.remove();
+  const s=document.createElement('script');
+  s.id='ejs-loader';
+  s.src='https://cdn.emulatorjs.org/stable/data/loader.js';
+  s.onload=()=>document.getElementById('playerStatus').textContent='플레이어 로드 완료';
+  s.onerror=()=>document.getElementById('playerStatus').textContent='EmulatorJS 로드 실패';
+  document.body.appendChild(s);
+}
+
+romFile.addEventListener('change',()=>{
+  const f=romFile.files[0];
+  if(!f) return;
+  if(!romTitle.value.trim()) romTitle.value=f.name.replace(/\.zip$/i,'');
+  romStatus.textContent=`선택됨: ${f.name} · ${(f.size/1024/1024).toFixed(2)} MB`;
+});
+
+playSelected.onclick=async()=>{
+  const f=romFile.files[0];
+  if(!f){romStatus.textContent='먼저 ROM ZIP 파일을 선택하세요.';return;}
+  const data=await f.arrayBuffer();
+  const payload={
+    name:f.name,
+    title:romTitle.value.trim()||f.name,
+    core:romCore.value,
+    data:data
+  };
+  if(saveRom.checked){
+    try{await saveToDB(payload);romStatus.textContent='브라우저에 저장했습니다. 실행을 시작합니다.';}
+    catch(e){romStatus.textContent='저장 실패. 이번 실행만 진행합니다.';}
+  }
+  startEmulator(data,f.name,payload.title,payload.core);
+};
+
+playSaved.onclick=async()=>{
+  try{
+    const saved=await readFromDB();
+    if(!saved){romStatus.textContent='저장된 게임이 없습니다.';return;}
+    romTitle.value=saved.title||saved.name||'';
+    romCore.value=saved.core||'arcade';
+    romStatus.textContent='저장된 게임을 불러왔습니다.';
+    startEmulator(saved.data,saved.name,saved.title,saved.core);
+  }catch(e){romStatus.textContent='저장된 게임을 읽지 못했습니다.';}
+};
+
+clearSaved.onclick=async()=>{
+  try{await deleteFromDB();romStatus.textContent='저장된 게임을 삭제했습니다.';}
+  catch(e){romStatus.textContent='삭제 중 오류가 발생했습니다.';}
+};
+
+(async()=>{
+  try{
+    const saved=await readFromDB();
+    if(saved) romStatus.textContent='이 브라우저에 저장된 게임이 있습니다. “저장된 게임 실행”을 눌러보세요.';
+  }catch(e){}
+})();
+</script>
+</body></html>

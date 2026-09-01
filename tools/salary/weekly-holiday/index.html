@@ -1,0 +1,33 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>주휴수당 계산기 - 주 15시간·비례시간 확인 | 무료 웹도구 - Factory One</title><meta name="description" content="시급과 주 소정근로시간, 개근 여부를 입력해 주휴 기본요건 충족 여부와 비례 주휴시간, 예상 주휴수당을 함께 확인합니다.">
+<link rel="canonical" href="https://factoryone.kr/tools/salary/weekly-holiday/"><link rel="stylesheet" href="../../../style.css"><meta name="robots" content="index,follow"><meta property="og:site_name" content="Factory One"><meta property="og:title" content="주휴수당 계산기 - 주 15시간·비례시간 확인 | 무료 웹도구 - Factory One"><meta property="og:description" content="시급과 주 소정근로시간, 개근 여부를 입력해 주휴 기본요건 충족 여부와 비례 주휴시간, 예상 주휴수당을 함께 확인합니다."><meta property="og:type" content="website"><meta property="og:url" content="https://factoryone.kr/tools/salary/weekly-holiday/"><script src="/assets/analytics.js" defer></script></head>
+<body><div class="wrap"><header class="siteHeader">
+<div class="logo" onclick="location.href='../../../index.html'">FACTORY <span>ONE</span></div>
+<nav class="nav"><a href="../../../index.html">HOME</a><a href="../../../programs/">PROGRAM</a><a href="../../../lisp/">LISP</a><a href="../../../apps/">APPS</a><a class="active" href="../../../tools/">TOOLS</a><a href="../../../games/">GAMES</a></nav>
+<a class="headerToolLink" href="../../">도구 찾기</a></header><main class="toolArticle">
+<div class="breadcrumbs"><a href="../../">TOOLS</a> / <a href="../">급여·근무 센터</a> / 주휴수당 계산기 - 주 15시간·비례시간 확인</div>
+<section class="richToolHero"><div><div class="eyebrow">SALARY · WEEKLY HOLIDAY</div><h1>주휴수당 계산기 - 주 15시간·비례시간 확인</h1><p>시급과 주 소정근로시간, 개근 여부를 입력해 주휴 기본요건 충족 여부와 비례 주휴시간, 예상 주휴수당을 함께 확인합니다.</p><div class="richBadges"><span>주 15시간 요건</span><span>개근 여부 체크</span><span>비례시간 표시</span></div></div><img src="../../../assets/covers/weekly-holiday.svg" alt="주휴수당 계산기 - 주 15시간·비례시간 확인 대표 이미지"></section>
+<section class="richCalc"><div class="richCalcHead"><div><span>WEEKLY HOLIDAY PAY</span><h2>주휴수당 조건 입력</h2></div><div class="richCalcActions"><button class="richBtn ghost" id="resetBtn">초기화</button><button class="richBtn" id="copyBtn">결과 복사</button></div></div>
+<div class="richInputs">
+<label><span>시급</span><div class="richInputUnit"><input id="wage" type="number" min="0" value="10320"><b>원</b></div></label>
+<label><span>주 소정근로시간</span><div class="richInputUnit"><input id="hours" type="number" min="0" max="40" step=".5" value="20"><b>시간</b></div></label>
+<label><span>주 소정근로일</span><div class="richInputUnit"><input id="days" type="number" min="1" max="7" value="5"><b>일</b></div></label>
+</div>
+<div class="richChecks"><label><input id="attendance" type="checkbox" checked> 소정근로일을 개근했습니다</label><label><input id="worker" type="checkbox" checked> 근로기준법상 근로자로 가정합니다</label></div>
+<div class="richResults"><div class="richResultsTop"><span>ELIGIBILITY & PAY</span><b id="eligible">-</b></div><div class="richResultGrid">
+<div class="richMetric"><span>주휴 유급시간</span><strong id="paidH">-</strong><small>간편 비례식 기준</small></div>
+<div class="richMetric"><span>주휴수당</span><strong id="pay">-</strong><small>시급 × 주휴시간</small></div>
+<div class="richMetric"><span>주 기본임금</span><strong id="base">-</strong><small>시급 × 소정근로시간</small></div>
+<div class="richMetric"><span>주 합계 예상</span><strong id="total">-</strong><small>기본임금 + 주휴수당</small></div>
+</div><div class="richVisualBar"><i id="bar" style="width:0%"></i></div></div></section>
+<div class="richNotice">주휴수당은 법적 요건과 근로계약을 함께 봐야 합니다. 이 계산기는 고용노동부가 안내하는 주 15시간 이상·소정근로일 개근이라는 기본 요건과 단시간근로 비례 예시를 바탕으로 한 간편 계산입니다.</div>
+<div class="richExplain"><section><h2>사용방법</h2><ol><li>근로계약상 주 소정근로시간을 입력합니다.</li><li>소정근로일 개근 여부를 체크합니다.</li><li>기본 요건 충족 여부를 먼저 확인합니다.</li><li>주휴시간과 수당을 기본임금과 분리해서 봅니다.</li></ol></section><section><h2>계산 기준</h2><div class="richFormula">기본 확인: 주 소정근로시간 15시간 이상 + 소정근로일 개근<br>단시간근로 간편 비례식: (주 소정근로시간 ÷ 40) × 8시간<br>주휴수당 = 주휴 유급시간 × 시급</div><p>고용노동부는 주 20시간 근로 예시에서 (20÷40)×8시간×시급 형태를 안내하고 있습니다.</p></section></div>
+<div class="richExplain"><section><h2>실제 사용 예시</h2><p>시급 10,320원, 주 20시간을 일하기로 계약하고 소정근로일을 개근했다면 간편 비례식의 주휴시간은 4시간, 예상 주휴수당은 41,280원입니다.</p></section><section><h2>자주 묻는 질문</h2><h3>실제로 15시간 넘게 일했으면 무조건 적용되나요?</h3><p>주휴 적용 판단은 원칙적으로 계약상 소정근로시간을 기준으로 봅니다.</p><h3>월급제도 계산해야 하나요?</h3><p>월급에 이미 주휴수당이 포함된 경우가 있어 급여구성을 확인해야 합니다.</p></section></div>
+<section class="richRelated"><div class="titleRow"><h2>같이 쓰면 좋은 도구</h2><span>RELATED TOOLS</span></div><div class="richRelatedGrid"><a href="../hourly-wage/"><b>시급 계산기</b><span>일·주·월 급여 환산</span></a><a href="../monthly-pay/"><b>월급 계산기</b><span>209시간 기준과 월 예상액 비교</span></a><a href="../work-hours/"><b>근무시간 계산기</b><span>출퇴근·휴게시간 계산</span></a></div></section>
+</main></div><script>
+const $=id=>document.getElementById(id), won=n=>Math.round(n).toLocaleString('ko-KR')+'원';
+function calc(){const w=+$('wage').value||0,h=+$('hours').value||0,att=$('attendance').checked,worker=$('worker').checked;const ok=worker&&att&&h>=15;const ph=ok?Math.min(8,(h/40)*8):0;const pay=w*ph,base=w*h;
+$('eligible').textContent=ok?'기본 요건 충족':'기본 요건 미충족';$('paidH').textContent=ph.toFixed(1)+'시간';$('pay').textContent=won(pay);$('base').textContent=won(base);$('total').textContent=won(base+pay);$('bar').style.width=Math.min(100,ph/8*100)+'%';}
+document.querySelectorAll('.richCalc input').forEach(x=>x.addEventListener('input',calc));document.querySelectorAll('.richCalc input[type=checkbox]').forEach(x=>x.addEventListener('change',calc));
+$('resetBtn').onclick=()=>{$('wage').value=10320;$('hours').value=20;$('days').value=5;$('attendance').checked=true;$('worker').checked=true;calc()};
+$('copyBtn').onclick=()=>navigator.clipboard?.writeText(`주휴수당 ${$('pay').textContent} / 주휴시간 ${$('paidH').textContent} / ${$('eligible').textContent}`);calc();</script><script src="/assets/tool-discovery.js"></script></body></html>

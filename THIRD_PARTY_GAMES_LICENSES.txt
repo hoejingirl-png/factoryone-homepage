@@ -1,0 +1,4 @@
+90s Games
+Repository: https://github.com/prateek121/90s-games
+License: MIT
+Factory One RC19 links/embeds the project's publicly hosted game pages and does not bundle commercial arcade ROMs.

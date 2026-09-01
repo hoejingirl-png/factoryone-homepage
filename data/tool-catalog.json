@@ -1,0 +1,1570 @@
+{
+  "version": "RC38",
+  "count": 52,
+  "tools": [
+    {
+      "id": "hourly-wage",
+      "title": "시급 계산기",
+      "center": "급여·근무",
+      "url": "/tools/salary/hourly-wage/",
+      "image": "/assets/covers/hourly-wage-calculator.svg",
+      "desc": "시급으로 일급·주급·월급 예상액을 계산합니다.",
+      "aliases": [
+        "최저시급",
+        "알바 시급",
+        "시급 월급",
+        "알바비",
+        "급여 계산"
+      ],
+      "keywords": [
+        "시급",
+        "일급",
+        "주급",
+        "월급",
+        "최저임금",
+        "근로시간"
+      ],
+      "related": [
+        "monthly-pay",
+        "weekly-holiday",
+        "work-hours"
+      ]
+    },
+    {
+      "id": "monthly-pay",
+      "title": "월급 계산기",
+      "center": "급여·근무",
+      "url": "/tools/salary/monthly-pay/",
+      "image": "/assets/covers/monthly-pay.svg",
+      "desc": "시급과 근로시간으로 월급과 209시간 기준을 비교합니다.",
+      "aliases": [
+        "시급 월급 환산",
+        "월급 환산",
+        "209시간",
+        "월 급여"
+      ],
+      "keywords": [
+        "월급",
+        "시급",
+        "209시간",
+        "연봉",
+        "급여"
+      ],
+      "related": [
+        "hourly-wage",
+        "weekly-holiday",
+        "work-hours"
+      ]
+    },
+    {
+      "id": "weekly-holiday",
+      "title": "주휴수당 계산기",
+      "center": "급여·근무",
+      "url": "/tools/salary/weekly-holiday/",
+      "image": "/assets/covers/weekly-holiday.svg",
+      "desc": "주 근로시간을 기준으로 주휴시간과 주휴수당을 계산합니다.",
+      "aliases": [
+        "주휴수당",
+        "주휴 계산",
+        "주 15시간"
+      ],
+      "keywords": [
+        "주휴",
+        "주휴수당",
+        "15시간",
+        "알바",
+        "시급"
+      ],
+      "related": [
+        "hourly-wage",
+        "monthly-pay",
+        "work-hours"
+      ]
+    },
+    {
+      "id": "work-hours",
+      "title": "근무시간 계산기",
+      "center": "급여·근무",
+      "url": "/tools/salary/work-hours/",
+      "image": "/assets/covers/work-hours.svg",
+      "desc": "출퇴근·휴게시간으로 일·주·월 근무시간을 계산합니다.",
+      "aliases": [
+        "근로시간",
+        "출퇴근 시간",
+        "근무 시간",
+        "휴게시간"
+      ],
+      "keywords": [
+        "출근",
+        "퇴근",
+        "근무시간",
+        "근로시간",
+        "야간",
+        "휴게"
+      ],
+      "related": [
+        "hourly-wage",
+        "monthly-pay",
+        "weekly-holiday"
+      ]
+    },
+    {
+      "id": "vat",
+      "title": "부가세 계산기",
+      "center": "사업·세금",
+      "url": "/tools/business/vat/",
+      "image": "/assets/covers/vat-calculator.svg",
+      "desc": "공급가액·부가세·합계금액을 양방향으로 계산합니다.",
+      "aliases": [
+        "부과세",
+        "vat",
+        "부가가치세",
+        "공급가액",
+        "세금계산서"
+      ],
+      "keywords": [
+        "부가세",
+        "부가가치세",
+        "VAT",
+        "공급가액",
+        "10%"
+      ],
+      "related": [
+        "margin",
+        "unit-price",
+        "stacked-discount"
+      ]
+    },
+    {
+      "id": "margin",
+      "title": "마진 계산기",
+      "center": "사업·세금",
+      "url": "/tools/business/margin/",
+      "image": "/assets/covers/margin.svg",
+      "desc": "원가·판매가·수수료·배송비를 반영해 순이익과 마진율을 계산합니다.",
+      "aliases": [
+        "마진율",
+        "판매 수익",
+        "순이익",
+        "손익분기",
+        "판매자 계산"
+      ],
+      "keywords": [
+        "마진",
+        "원가",
+        "판매가",
+        "수수료",
+        "손익분기",
+        "이익률"
+      ],
+      "related": [
+        "vat",
+        "unit-price",
+        "reverse-discount"
+      ]
+    },
+    {
+      "id": "loan-repayment",
+      "title": "대출이자 계산기",
+      "center": "금융",
+      "url": "/tools/finance/loan-repayment/",
+      "image": "/assets/covers/loan-repayment.svg",
+      "desc": "원리금균등과 원금균등의 월 납입액·총이자를 비교합니다.",
+      "aliases": [
+        "대출 계산",
+        "대출이자",
+        "원리금균등",
+        "원금균등",
+        "주택담보대출 계산"
+      ],
+      "keywords": [
+        "대출",
+        "이자",
+        "금리",
+        "상환",
+        "원리금",
+        "원금균등"
+      ],
+      "related": [
+        "deposit-interest",
+        "compound-growth"
+      ]
+    },
+    {
+      "id": "deposit-interest",
+      "title": "예금이자 계산기",
+      "center": "금융",
+      "url": "/tools/finance/deposit-interest/",
+      "image": "/assets/covers/deposit-interest.svg",
+      "desc": "단리·월복리의 세전·세후 이자와 만기금액을 계산합니다.",
+      "aliases": [
+        "예금 이자",
+        "예금 만기",
+        "세후 이자",
+        "정기예금 계산"
+      ],
+      "keywords": [
+        "예금",
+        "이자",
+        "금리",
+        "세후",
+        "만기",
+        "단리",
+        "복리"
+      ],
+      "related": [
+        "compound-growth",
+        "loan-repayment"
+      ]
+    },
+    {
+      "id": "compound-growth",
+      "title": "복리 계산기",
+      "center": "금융",
+      "url": "/tools/finance/compound-growth/",
+      "image": "/assets/covers/compound-growth.svg",
+      "desc": "초기금액·월적립·수익률로 장기 복리 성장을 계산합니다.",
+      "aliases": [
+        "복리",
+        "적립식 계산",
+        "투자 복리",
+        "월 적립"
+      ],
+      "keywords": [
+        "복리",
+        "수익률",
+        "적립",
+        "기간",
+        "성장"
+      ],
+      "related": [
+        "deposit-interest",
+        "loan-repayment"
+      ]
+    },
+    {
+      "id": "dday",
+      "title": "D-day 날짜 계산기",
+      "center": "생활·날짜",
+      "url": "/tools/dday-calculator/",
+      "image": "/assets/covers/dday-calculator.svg",
+      "desc": "목표일까지 남은 날짜와 D-day를 계산합니다.",
+      "aliases": [
+        "디데이",
+        "d day",
+        "남은 날짜",
+        "시험일까지"
+      ],
+      "keywords": [
+        "D-day",
+        "디데이",
+        "날짜",
+        "남은날"
+      ],
+      "related": [
+        "date-difference",
+        "business-days",
+        "tenure"
+      ]
+    },
+    {
+      "id": "date-difference",
+      "title": "날짜 차이 계산기",
+      "center": "생활·날짜",
+      "url": "/tools/life/date-difference/",
+      "image": "/assets/covers/date-difference.svg",
+      "desc": "두 날짜의 일수·주수·평일·주말을 상세 계산합니다.",
+      "aliases": [
+        "날짜 계산",
+        "며칠 차이",
+        "두 날짜 사이",
+        "기간 계산"
+      ],
+      "keywords": [
+        "날짜차이",
+        "일수",
+        "주수",
+        "평일",
+        "주말",
+        "기간"
+      ],
+      "related": [
+        "dday",
+        "business-days",
+        "tenure"
+      ]
+    },
+    {
+      "id": "business-days",
+      "title": "영업일 계산기",
+      "center": "생활·날짜",
+      "url": "/tools/life/business-days/",
+      "image": "/assets/covers/business-days.svg",
+      "desc": "주말과 직접 입력한 휴무일을 제외해 영업일을 계산합니다.",
+      "aliases": [
+        "근무일 계산",
+        "영업일수",
+        "주말 제외 날짜",
+        "working days"
+      ],
+      "keywords": [
+        "영업일",
+        "근무일",
+        "휴일",
+        "주말",
+        "납기"
+      ],
+      "related": [
+        "date-difference",
+        "tenure",
+        "dday"
+      ]
+    },
+    {
+      "id": "tenure",
+      "title": "근속기간 계산기",
+      "center": "생활·날짜",
+      "url": "/tools/life/tenure/",
+      "image": "/assets/covers/tenure.svg",
+      "desc": "입사일부터 년·개월·일, 총 일수와 다음 기념일을 계산합니다.",
+      "aliases": [
+        "근속연수",
+        "재직기간",
+        "입사일 계산",
+        "근무기간"
+      ],
+      "keywords": [
+        "근속",
+        "입사일",
+        "재직",
+        "년차",
+        "기간"
+      ],
+      "related": [
+        "date-difference",
+        "business-days",
+        "age"
+      ]
+    },
+    {
+      "id": "age",
+      "title": "나이 계산기",
+      "center": "생활·날짜",
+      "url": "/tools/age-calculator/",
+      "image": "/assets/covers/age-calculator.svg",
+      "desc": "생년월일 기준 만 나이와 연 나이를 계산합니다.",
+      "aliases": [
+        "만나이",
+        "만 나이",
+        "한국 나이",
+        "생년월일 나이"
+      ],
+      "keywords": [
+        "나이",
+        "만나이",
+        "생년월일"
+      ],
+      "related": [
+        "dday",
+        "date-difference",
+        "tenure"
+      ]
+    },
+    {
+      "id": "dutch-pay",
+      "title": "더치페이 계산기",
+      "center": "생활·날짜",
+      "url": "/tools/dutch-pay/",
+      "image": "/assets/covers/dutch-pay.svg",
+      "desc": "총금액과 추가비용을 인원수에 맞춰 나눕니다.",
+      "aliases": [
+        "n빵",
+        "엔빵",
+        "정산 계산",
+        "회비 나누기"
+      ],
+      "keywords": [
+        "더치페이",
+        "정산",
+        "인원",
+        "나누기"
+      ],
+      "related": [
+        "discount",
+        "unit-price"
+      ]
+    },
+    {
+      "id": "living-cost",
+      "title": "생활비 계산기",
+      "center": "생활·날짜",
+      "url": "/tools/living-cost-calculator/",
+      "image": "/assets/covers/living-cost-calculator.svg",
+      "desc": "월 고정비와 변동비를 모아 생활비를 계산합니다.",
+      "aliases": [
+        "월 생활비",
+        "고정비 계산",
+        "가계부 계산"
+      ],
+      "keywords": [
+        "생활비",
+        "월세",
+        "식비",
+        "고정비",
+        "지출"
+      ],
+      "related": [
+        "dutch-pay",
+        "compound-growth"
+      ]
+    },
+    {
+      "id": "discount",
+      "title": "할인 계산기",
+      "center": "쇼핑·가격",
+      "url": "/tools/discount-calculator/",
+      "image": "/assets/covers/discount-calculator.svg",
+      "desc": "할인율과 쿠폰을 반영해 최종 결제금액을 계산합니다.",
+      "aliases": [
+        "세일 계산",
+        "할인가",
+        "몇프로 할인",
+        "할인율"
+      ],
+      "keywords": [
+        "할인",
+        "쿠폰",
+        "결제금액",
+        "세일"
+      ],
+      "related": [
+        "stacked-discount",
+        "reverse-discount",
+        "unit-price"
+      ]
+    },
+    {
+      "id": "stacked-discount",
+      "title": "중복 할인 계산기",
+      "center": "쇼핑·가격",
+      "url": "/tools/shopping/stacked-discount/",
+      "image": "/assets/covers/stacked-discount.svg",
+      "desc": "1차·2차 할인과 쿠폰·포인트를 순차 적용합니다.",
+      "aliases": [
+        "쿠폰 중복 할인",
+        "추가 할인",
+        "할인 두번",
+        "중첩 할인"
+      ],
+      "keywords": [
+        "중복할인",
+        "쿠폰",
+        "포인트",
+        "할인율"
+      ],
+      "related": [
+        "discount",
+        "reverse-discount",
+        "unit-price"
+      ]
+    },
+    {
+      "id": "reverse-discount",
+      "title": "할인 전 가격 계산기",
+      "center": "쇼핑·가격",
+      "url": "/tools/shopping/reverse-discount/",
+      "image": "/assets/covers/reverse-discount.svg",
+      "desc": "할인가와 할인율에서 원래 가격과 실질 할인율을 역산합니다.",
+      "aliases": [
+        "정가 역산",
+        "원가 역산",
+        "할인 전 가격",
+        "원래 가격"
+      ],
+      "keywords": [
+        "할인가",
+        "정가",
+        "역산",
+        "할인율"
+      ],
+      "related": [
+        "discount",
+        "stacked-discount",
+        "unit-price"
+      ]
+    },
+    {
+      "id": "unit-price",
+      "title": "단가 비교 계산기",
+      "center": "쇼핑·가격",
+      "url": "/tools/shopping/unit-price/",
+      "image": "/assets/covers/unit-price.svg",
+      "desc": "100g·100ml·개당·m당 가격으로 두 상품을 비교합니다.",
+      "aliases": [
+        "100g 가격",
+        "100ml 가격",
+        "개당 가격",
+        "가성비 비교",
+        "단위 가격"
+      ],
+      "keywords": [
+        "단가",
+        "용량",
+        "가격비교",
+        "100g",
+        "100ml",
+        "개당"
+      ],
+      "related": [
+        "discount",
+        "stacked-discount",
+        "margin"
+      ]
+    },
+    {
+      "id": "shoe-size",
+      "title": "신발 사이즈 변환기",
+      "center": "쇼핑·가격",
+      "url": "/tools/shoe-size-converter/",
+      "image": "/assets/covers/shoe-size-converter.svg",
+      "desc": "한국·미국·유럽·영국 신발 사이즈를 비교합니다.",
+      "aliases": [
+        "미국 신발 사이즈",
+        "EU 사이즈",
+        "US 신발",
+        "해외 신발 사이즈"
+      ],
+      "keywords": [
+        "신발",
+        "사이즈",
+        "US",
+        "EU",
+        "UK",
+        "mm"
+      ],
+      "related": [
+        "unit-quick"
+      ]
+    },
+    {
+      "id": "unit-quick",
+      "title": "빠른 단위 변환기",
+      "center": "단위·변환",
+      "url": "/tools/unit/quick-unit/",
+      "image": "/assets/covers/quick-unit.svg",
+      "desc": "길이·무게·넓이·속도를 한 화면에서 양방향 변환합니다.",
+      "aliases": [
+        "단위 환산",
+        "cm inch",
+        "kg lb",
+        "미터 피트",
+        "평방미터"
+      ],
+      "keywords": [
+        "단위",
+        "길이",
+        "무게",
+        "넓이",
+        "속도",
+        "cm",
+        "inch",
+        "kg",
+        "lb"
+      ],
+      "related": [
+        "temperature",
+        "data-size",
+        "area-pyeong"
+      ]
+    },
+    {
+      "id": "temperature",
+      "title": "온도 변환기",
+      "center": "단위·변환",
+      "url": "/tools/unit/temperature/",
+      "image": "/assets/covers/temperature.svg",
+      "desc": "섭씨·화씨·켈빈 사이 온도를 즉시 변환합니다.",
+      "aliases": [
+        "섭씨 화씨",
+        "화씨 섭씨",
+        "c f 변환",
+        "온도 환산"
+      ],
+      "keywords": [
+        "온도",
+        "섭씨",
+        "화씨",
+        "켈빈",
+        "C",
+        "F",
+        "K"
+      ],
+      "related": [
+        "unit-quick",
+        "data-size"
+      ]
+    },
+    {
+      "id": "data-size",
+      "title": "데이터 용량 변환기",
+      "center": "단위·변환",
+      "url": "/tools/unit/data-size/",
+      "image": "/assets/covers/data-size.svg",
+      "desc": "B·KB·MB·GB·TB를 1024 또는 1000 기준으로 변환합니다.",
+      "aliases": [
+        "mb gb",
+        "gb mb",
+        "파일 용량 변환",
+        "기가 메가"
+      ],
+      "keywords": [
+        "KB",
+        "MB",
+        "GB",
+        "TB",
+        "byte",
+        "용량"
+      ],
+      "related": [
+        "unit-quick",
+        "image-compress",
+        "pdf-compress"
+      ]
+    },
+    {
+      "id": "unit-converter",
+      "title": "통합 단위 변환기",
+      "center": "단위·변환",
+      "url": "/tools/unit-converter/",
+      "image": "/assets/covers/unit-converter.svg",
+      "desc": "길이·무게·넓이·온도·속도·데이터 단위를 통합 변환합니다.",
+      "aliases": [
+        "모든 단위 변환",
+        "단위 계산기"
+      ],
+      "keywords": [
+        "단위",
+        "변환",
+        "길이",
+        "무게",
+        "온도",
+        "속도"
+      ],
+      "related": [
+        "unit-quick",
+        "temperature",
+        "data-size"
+      ]
+    },
+    {
+      "id": "pdf-merge",
+      "title": "PDF 합치기",
+      "center": "PDF",
+      "url": "/tools/pdf-merge/",
+      "image": "/assets/covers/pdf-merge.svg",
+      "desc": "여러 PDF를 선택한 순서대로 하나의 문서로 합칩니다.",
+      "aliases": [
+        "pdf 병합",
+        "pdf 묶기",
+        "pdf 파일 합치기",
+        "피디에프 합치기"
+      ],
+      "keywords": [
+        "PDF",
+        "합치기",
+        "병합",
+        "merge"
+      ],
+      "related": [
+        "pdf-split",
+        "pdf-editor",
+        "pdf-compress"
+      ]
+    },
+    {
+      "id": "pdf-split",
+      "title": "PDF 페이지 추출",
+      "center": "PDF",
+      "url": "/tools/pdf-split/",
+      "image": "/assets/covers/pdf-split.svg",
+      "desc": "PDF에서 필요한 페이지만 골라 새 PDF로 저장합니다.",
+      "aliases": [
+        "pdf 나누기",
+        "pdf 분할",
+        "페이지 추출",
+        "pdf 페이지 빼기"
+      ],
+      "keywords": [
+        "PDF",
+        "나누기",
+        "분할",
+        "추출",
+        "페이지"
+      ],
+      "related": [
+        "pdf-merge",
+        "pdf-editor",
+        "pdf-page-number"
+      ]
+    },
+    {
+      "id": "images-to-pdf",
+      "title": "이미지 → PDF",
+      "center": "PDF",
+      "url": "/tools/images-to-pdf/",
+      "image": "/assets/covers/images-to-pdf.svg",
+      "desc": "JPG·PNG 이미지를 하나의 PDF 문서로 묶습니다.",
+      "aliases": [
+        "jpg pdf",
+        "png pdf",
+        "사진 pdf",
+        "이미지를 pdf로"
+      ],
+      "keywords": [
+        "이미지",
+        "JPG",
+        "PNG",
+        "PDF",
+        "변환"
+      ],
+      "related": [
+        "pdf-to-images",
+        "pdf-compress",
+        "pdf-merge"
+      ]
+    },
+    {
+      "id": "pdf-to-images",
+      "title": "PDF → 이미지",
+      "center": "PDF",
+      "url": "/tools/pdf-to-images/",
+      "image": "/assets/covers/pdf-to-images.svg",
+      "desc": "PDF 각 페이지를 이미지로 변환합니다.",
+      "aliases": [
+        "pdf jpg",
+        "pdf png",
+        "pdf 사진",
+        "pdf를 이미지로"
+      ],
+      "keywords": [
+        "PDF",
+        "JPG",
+        "PNG",
+        "이미지",
+        "변환"
+      ],
+      "related": [
+        "images-to-pdf",
+        "image-compress",
+        "pdf-compress"
+      ]
+    },
+    {
+      "id": "pdf-compress",
+      "title": "PDF 용량 줄이기",
+      "center": "PDF",
+      "url": "/tools/pdf-compress/",
+      "image": "/assets/covers/pdf-compress.svg",
+      "desc": "PDF 파일 크기를 줄여 전송·업로드하기 쉽게 만듭니다.",
+      "aliases": [
+        "pdf 압축",
+        "pdf 사이즈 줄이기",
+        "pdf mb 줄이기",
+        "pdf 용량"
+      ],
+      "keywords": [
+        "PDF",
+        "압축",
+        "용량",
+        "파일크기"
+      ],
+      "related": [
+        "pdf-merge",
+        "pdf-to-images",
+        "data-size"
+      ]
+    },
+    {
+      "id": "pdf-editor",
+      "title": "PDF 페이지 편집",
+      "center": "PDF",
+      "url": "/tools/pdf-editor/",
+      "image": "/assets/covers/pdf-editor.svg",
+      "desc": "PDF 페이지 순서 변경·삭제·회전을 처리합니다.",
+      "aliases": [
+        "pdf 회전",
+        "pdf 페이지 삭제",
+        "pdf 순서 변경",
+        "pdf 편집"
+      ],
+      "keywords": [
+        "PDF",
+        "편집",
+        "회전",
+        "삭제",
+        "순서"
+      ],
+      "related": [
+        "pdf-split",
+        "pdf-page-number",
+        "pdf-watermark"
+      ]
+    },
+    {
+      "id": "pdf-watermark",
+      "title": "PDF 워터마크 넣기",
+      "center": "PDF",
+      "url": "/tools/pdf-watermark/",
+      "image": "/assets/covers/pdf-watermark.svg",
+      "desc": "PDF 페이지에 문구 워터마크를 추가합니다.",
+      "aliases": [
+        "pdf 도장",
+        "pdf 워터마크",
+        "검토용 표시"
+      ],
+      "keywords": [
+        "PDF",
+        "워터마크",
+        "문구",
+        "표시"
+      ],
+      "related": [
+        "pdf-page-number",
+        "pdf-editor",
+        "pdf-metadata"
+      ]
+    },
+    {
+      "id": "pdf-page-number",
+      "title": "PDF 페이지 번호 넣기",
+      "center": "PDF",
+      "url": "/tools/pdf-page-number/",
+      "image": "/assets/covers/pdf-page-number.svg",
+      "desc": "PDF에 시작 번호와 위치를 정해 페이지 번호를 추가합니다.",
+      "aliases": [
+        "pdf 쪽번호",
+        "페이지 넘버",
+        "pdf 번호"
+      ],
+      "keywords": [
+        "PDF",
+        "페이지",
+        "번호",
+        "쪽번호"
+      ],
+      "related": [
+        "pdf-editor",
+        "pdf-watermark",
+        "pdf-metadata"
+      ]
+    },
+    {
+      "id": "pdf-metadata",
+      "title": "PDF 문서정보 수정",
+      "center": "PDF",
+      "url": "/tools/pdf-metadata/",
+      "image": "/assets/covers/pdf-metadata.svg",
+      "desc": "PDF 제목·작성자 등 문서 메타데이터를 수정합니다.",
+      "aliases": [
+        "pdf 메타데이터",
+        "pdf 제목 수정",
+        "pdf 작성자"
+      ],
+      "keywords": [
+        "PDF",
+        "메타데이터",
+        "제목",
+        "작성자",
+        "문서정보"
+      ],
+      "related": [
+        "pdf-watermark",
+        "pdf-page-number",
+        "pdf-compress"
+      ]
+    },
+    {
+      "id": "image-compress",
+      "title": "이미지 용량 줄이기",
+      "center": "이미지",
+      "url": "/tools/image-compress/",
+      "image": "/assets/covers/image-compress.svg",
+      "desc": "원본과 결과를 비교하며 이미지 파일 용량을 줄입니다.",
+      "aliases": [
+        "사진 용량 줄이기",
+        "사진 100kb",
+        "이미지 압축",
+        "jpg 용량 줄이기",
+        "사진 크기 줄이기"
+      ],
+      "keywords": [
+        "이미지",
+        "사진",
+        "압축",
+        "용량",
+        "100KB",
+        "JPG"
+      ],
+      "related": [
+        "image-resize",
+        "image-convert",
+        "image-exif"
+      ]
+    },
+    {
+      "id": "image-resize",
+      "title": "이미지 크기 변경",
+      "center": "이미지",
+      "url": "/tools/image-resize/",
+      "image": "/assets/covers/image-resize.svg",
+      "desc": "가로·세로 픽셀을 조절해 원하는 해상도로 저장합니다.",
+      "aliases": [
+        "사진 사이즈 변경",
+        "이미지 리사이즈",
+        "픽셀 줄이기",
+        "1200px"
+      ],
+      "keywords": [
+        "이미지",
+        "크기",
+        "픽셀",
+        "resize",
+        "해상도"
+      ],
+      "related": [
+        "image-compress",
+        "image-crop",
+        "image-convert"
+      ]
+    },
+    {
+      "id": "image-convert",
+      "title": "이미지 포맷 변환",
+      "center": "이미지",
+      "url": "/tools/image-convert/",
+      "image": "/assets/covers/image-convert.svg",
+      "desc": "JPG·PNG·WebP 등 이미지 형식을 변환합니다.",
+      "aliases": [
+        "jpg png",
+        "png jpg",
+        "webp jpg",
+        "사진 포맷 변환"
+      ],
+      "keywords": [
+        "JPG",
+        "PNG",
+        "WebP",
+        "이미지",
+        "변환"
+      ],
+      "related": [
+        "image-compress",
+        "image-resize",
+        "image-exif"
+      ]
+    },
+    {
+      "id": "image-crop",
+      "title": "이미지 자르기",
+      "center": "이미지",
+      "url": "/tools/image-crop/",
+      "image": "/assets/covers/image-crop.svg",
+      "desc": "사진에서 필요한 영역만 잘라 새 이미지로 저장합니다.",
+      "aliases": [
+        "사진 자르기",
+        "이미지 크롭",
+        "crop"
+      ],
+      "keywords": [
+        "이미지",
+        "사진",
+        "자르기",
+        "크롭"
+      ],
+      "related": [
+        "image-resize",
+        "image-rotate",
+        "image-compress"
+      ]
+    },
+    {
+      "id": "image-rotate",
+      "title": "이미지 회전·뒤집기",
+      "center": "이미지",
+      "url": "/tools/image-rotate/",
+      "image": "/assets/covers/image-rotate.svg",
+      "desc": "사진을 회전하거나 좌우·상하로 뒤집습니다.",
+      "aliases": [
+        "사진 회전",
+        "이미지 뒤집기",
+        "90도 회전"
+      ],
+      "keywords": [
+        "이미지",
+        "사진",
+        "회전",
+        "반전"
+      ],
+      "related": [
+        "image-crop",
+        "image-exif",
+        "image-resize"
+      ]
+    },
+    {
+      "id": "image-exif",
+      "title": "사진 EXIF 정보 삭제",
+      "center": "이미지",
+      "url": "/tools/image-exif-remove/",
+      "image": "/assets/covers/image-exif-remove.svg",
+      "desc": "사진의 위치·기기 등 EXIF 메타데이터 제거용 도구입니다.",
+      "aliases": [
+        "사진 위치정보 삭제",
+        "exif 제거",
+        "사진 개인정보 삭제",
+        "메타데이터 삭제"
+      ],
+      "keywords": [
+        "EXIF",
+        "메타데이터",
+        "위치정보",
+        "사진",
+        "개인정보"
+      ],
+      "related": [
+        "image-compress",
+        "image-convert",
+        "image-color"
+      ]
+    },
+    {
+      "id": "image-color",
+      "title": "이미지 색상 추출",
+      "center": "이미지",
+      "url": "/tools/image-color-picker/",
+      "image": "/assets/covers/image-color-picker.svg",
+      "desc": "이미지에서 원하는 픽셀의 HEX·RGB 색상을 확인합니다.",
+      "aliases": [
+        "색상 추출",
+        "컬러 피커",
+        "사진 색상 코드",
+        "hex 추출"
+      ],
+      "keywords": [
+        "색상",
+        "HEX",
+        "RGB",
+        "컬러",
+        "이미지"
+      ],
+      "related": [
+        "image-crop",
+        "image-convert"
+      ]
+    },
+    {
+      "id": "character-counter",
+      "title": "글자수 세기",
+      "center": "문서·텍스트",
+      "url": "/tools/character-counter/",
+      "image": "/assets/covers/character-counter.svg",
+      "desc": "공백 포함·제외 글자수, 단어 수와 줄 수를 셉니다.",
+      "aliases": [
+        "글자 수",
+        "자소수",
+        "문자수",
+        "몇글자"
+      ],
+      "keywords": [
+        "글자수",
+        "문자수",
+        "단어",
+        "줄",
+        "공백"
+      ],
+      "related": [
+        "text-cleaner",
+        "duplicate-lines",
+        "line-sorter"
+      ]
+    },
+    {
+      "id": "text-cleaner",
+      "title": "텍스트 정리기",
+      "center": "문서·텍스트",
+      "url": "/tools/text/text-cleaner/",
+      "image": "/assets/covers/text-cleaner.svg",
+      "desc": "앞뒤 공백·연속 공백·불필요한 빈 줄을 정리합니다.",
+      "aliases": [
+        "공백 제거",
+        "빈줄 제거",
+        "텍스트 공백 정리",
+        "문장 정리"
+      ],
+      "keywords": [
+        "텍스트",
+        "공백",
+        "빈줄",
+        "정리"
+      ],
+      "related": [
+        "duplicate-lines",
+        "line-sorter",
+        "character-counter"
+      ]
+    },
+    {
+      "id": "duplicate-lines",
+      "title": "중복 줄 제거기",
+      "center": "문서·텍스트",
+      "url": "/tools/text/duplicate-lines/",
+      "image": "/assets/covers/duplicate-lines.svg",
+      "desc": "여러 줄 목록에서 중복값을 제거하고 최초 순서를 유지합니다.",
+      "aliases": [
+        "중복줄 삭제",
+        "중복 제거",
+        "목록 중복",
+        "중복값 제거"
+      ],
+      "keywords": [
+        "중복",
+        "줄",
+        "목록",
+        "텍스트"
+      ],
+      "related": [
+        "text-cleaner",
+        "line-sorter",
+        "character-counter"
+      ]
+    },
+    {
+      "id": "line-sorter",
+      "title": "줄 정렬기",
+      "center": "문서·텍스트",
+      "url": "/tools/text/line-sorter/",
+      "image": "/assets/covers/line-sorter.svg",
+      "desc": "여러 줄을 가나다·숫자·문자 길이순으로 정렬합니다.",
+      "aliases": [
+        "가나다 정렬",
+        "숫자 정렬",
+        "목록 정렬",
+        "줄 순서"
+      ],
+      "keywords": [
+        "정렬",
+        "가나다",
+        "숫자",
+        "줄",
+        "목록"
+      ],
+      "related": [
+        "duplicate-lines",
+        "text-cleaner",
+        "case-converter"
+      ]
+    },
+    {
+      "id": "case-converter",
+      "title": "대소문자 변환기",
+      "center": "문서·텍스트",
+      "url": "/tools/text/case-converter/",
+      "image": "/assets/covers/case-converter.svg",
+      "desc": "UPPER·lower·Title·snake_case·kebab-case로 변환합니다.",
+      "aliases": [
+        "대문자 변환",
+        "소문자 변환",
+        "snake case",
+        "kebab case",
+        "영문 변환"
+      ],
+      "keywords": [
+        "대문자",
+        "소문자",
+        "영문",
+        "snake",
+        "kebab",
+        "case"
+      ],
+      "related": [
+        "text-cleaner",
+        "line-sorter",
+        "character-counter"
+      ]
+    },
+    {
+      "id": "qr",
+      "title": "QR 코드 생성기",
+      "center": "문서·텍스트",
+      "url": "/tools/qr-generator/",
+      "image": "/assets/covers/qr-generator.svg",
+      "desc": "URL이나 텍스트를 QR 코드로 만듭니다.",
+      "aliases": [
+        "큐알 코드",
+        "qr 만들기",
+        "url qr"
+      ],
+      "keywords": [
+        "QR",
+        "코드",
+        "URL",
+        "텍스트"
+      ],
+      "related": [
+        "character-counter",
+        "text-cleaner"
+      ]
+    },
+    {
+      "id": "area-pyeong",
+      "title": "평수 계산기",
+      "center": "CAD·현장",
+      "url": "/tools/cad/area-pyeong/",
+      "image": "/assets/covers/area-pyeong.svg",
+      "desc": "㎡·평·ft²·yd²와 가로×세로 면적을 변환합니다.",
+      "aliases": [
+        "평 계산",
+        "제곱미터 평",
+        "m2 평",
+        "면적 평수"
+      ],
+      "keywords": [
+        "평수",
+        "평",
+        "제곱미터",
+        "m²",
+        "면적"
+      ],
+      "related": [
+        "scale",
+        "concrete-volume",
+        "unit-quick"
+      ]
+    },
+    {
+      "id": "scale",
+      "title": "도면 축척 계산기",
+      "center": "CAD·현장",
+      "url": "/tools/cad/scale/",
+      "image": "/assets/covers/scale.svg",
+      "desc": "1:100 같은 도면 축척의 실제길이와 출력비율을 계산합니다.",
+      "aliases": [
+        "1:100",
+        "축척 계산",
+        "스케일 계산",
+        "도면 배율",
+        "1대100"
+      ],
+      "keywords": [
+        "축척",
+        "도면",
+        "1:100",
+        "스케일",
+        "실제길이"
+      ],
+      "related": [
+        "area-pyeong",
+        "rebar-weight",
+        "concrete-volume"
+      ]
+    },
+    {
+      "id": "rebar-weight",
+      "title": "철근 중량 계산기",
+      "center": "CAD·현장",
+      "url": "/tools/cad/rebar-weight/",
+      "image": "/assets/covers/rebar-weight.svg",
+      "desc": "D10~D32 철근의 길이·수량으로 kg·톤 중량을 계산합니다.",
+      "aliases": [
+        "철근 무게",
+        "철근 ton",
+        "철근 kg",
+        "D10 중량"
+      ],
+      "keywords": [
+        "철근",
+        "중량",
+        "D10",
+        "D13",
+        "D16",
+        "톤"
+      ],
+      "related": [
+        "concrete-volume",
+        "area-pyeong",
+        "scale"
+      ]
+    },
+    {
+      "id": "concrete-volume",
+      "title": "콘크리트 물량 계산기",
+      "center": "CAD·현장",
+      "url": "/tools/cad/concrete-volume/",
+      "image": "/assets/covers/concrete-volume.svg",
+      "desc": "슬래브·벽체·원형기둥의 콘크리트 m³와 차량 수를 계산합니다.",
+      "aliases": [
+        "레미콘 계산",
+        "콘크리트 루베",
+        "콘크리트 m3",
+        "타설 물량"
+      ],
+      "keywords": [
+        "콘크리트",
+        "레미콘",
+        "루베",
+        "m³",
+        "물량",
+        "슬래브"
+      ],
+      "related": [
+        "rebar-weight",
+        "area-pyeong",
+        "scale"
+      ]
+    },
+    {
+      "id": "lotto",
+      "title": "로또 번호 생성기",
+      "center": "번호·랜덤",
+      "url": "/tools/lotto-generator/",
+      "image": "/assets/covers/lotto-generator.svg",
+      "desc": "무작위 로또 번호 조합을 생성합니다.",
+      "aliases": [
+        "로또 번호",
+        "랜덤 번호",
+        "복권 번호"
+      ],
+      "keywords": [
+        "로또",
+        "번호",
+        "랜덤",
+        "추첨"
+      ],
+      "related": []
+    },
+    {
+      "id": "image-target-file-size",
+      "title": "사진 용량 맞추기",
+      "center": "이미지",
+      "url": "/tools/image/target-file-size/",
+      "image": "/assets/site-art/search-tools/image-target-size.svg",
+      "desc": "사진을 100KB·200KB 등 원하는 목표 용량 이하로 자동 압축",
+      "aliases": [
+        "사진 100kb",
+        "사진 200kb",
+        "사진 용량 맞추기",
+        "사진 kb 줄이기"
+      ],
+      "keywords": [
+        "이미지 압축",
+        "용량 제한",
+        "jpg 용량",
+        "100KB 이하"
+      ],
+      "related": [
+        "image-compress",
+        "image-resize"
+      ]
+    },
+    {
+      "id": "image-mosaic-redact",
+      "title": "사진 모자이크·개인정보 가리기",
+      "center": "이미지",
+      "url": "/tools/image/mosaic-redact/",
+      "image": "/assets/site-art/search-tools/photo-mosaic.svg",
+      "desc": "얼굴·차량번호·주소 영역을 직접 모자이크 또는 검정 가리기",
+      "aliases": [
+        "사진 모자이크",
+        "번호판 가리기",
+        "개인정보 가리기"
+      ],
+      "keywords": [
+        "블러",
+        "얼굴 가리기",
+        "차량번호",
+        "사진 개인정보"
+      ],
+      "related": [
+        "image-exif-remove",
+        "image-crop"
+      ]
+    },
+    {
+      "id": "image-id-photo-resize",
+      "title": "증명사진 크기 맞추기",
+      "center": "이미지",
+      "url": "/tools/image/id-photo-resize/",
+      "image": "/assets/site-art/search-tools/id-photo-resize.svg",
+      "desc": "3×4cm, 3.5×4.5cm 등 증명사진 규격으로 자동 크롭",
+      "aliases": [
+        "증명사진 사이즈",
+        "3x4 사진",
+        "3.5x4.5 사진"
+      ],
+      "keywords": [
+        "증명사진 크기",
+        "이력서 사진",
+        "사진 규격"
+      ],
+      "related": [
+        "image-dpi-pixel",
+        "image-resize"
+      ]
+    },
+    {
+      "id": "image-dpi-pixel",
+      "title": "DPI·픽셀·인쇄크기 계산기",
+      "center": "이미지",
+      "url": "/tools/image/dpi-pixel/",
+      "image": "/assets/site-art/search-tools/dpi-pixel.svg",
+      "desc": "cm·DPI에서 픽셀 계산, 픽셀에서 인쇄 크기 역산",
+      "aliases": [
+        "dpi 계산기",
+        "픽셀 cm 변환",
+        "300dpi 픽셀"
+      ],
+      "keywords": [
+        "인쇄 해상도",
+        "cm px",
+        "사진 픽셀"
+      ],
+      "related": [
+        "image-id-photo-resize",
+        "image-resize"
+      ]
+    },
+    {
+      "id": "business-percentage",
+      "title": "퍼센트 계산기",
+      "center": "사업·세금",
+      "url": "/tools/business/percentage/",
+      "image": "/assets/site-art/search-tools/percentage.svg",
+      "desc": "몇 퍼센트, 증감률, 특정 퍼센트 값을 함께 계산",
+      "aliases": [
+        "퍼센트 계산",
+        "몇프로",
+        "몇 퍼센트",
+        "증가율 계산"
+      ],
+      "keywords": [
+        "백분율",
+        "증감률",
+        "비율"
+      ],
+      "related": [
+        "business-ratio",
+        "business-margin"
+      ]
+    },
+    {
+      "id": "business-ratio",
+      "title": "비율·비례식 계산기",
+      "center": "사업·세금",
+      "url": "/tools/business/ratio/",
+      "image": "/assets/site-art/search-tools/ratio.svg",
+      "desc": "A:B 비율 간소화와 A:B=C:X 비례식 계산",
+      "aliases": [
+        "비율 계산기",
+        "비례식 계산기",
+        "16:9 계산"
+      ],
+      "keywords": [
+        "비례식",
+        "비율",
+        "배수"
+      ],
+      "related": [
+        "business-percentage",
+        "cad-scale"
+      ]
+    },
+    {
+      "id": "salary-retirement-pay",
+      "title": "퇴직금 예상 계산기",
+      "center": "급여·근무",
+      "url": "/tools/salary/retirement-pay/",
+      "image": "/assets/site-art/search-tools/retirement-pay.svg",
+      "desc": "퇴직 전 3개월 평균임금과 재직일수로 예상 퇴직금 계산",
+      "aliases": [
+        "퇴직금 계산기",
+        "퇴직금 계산",
+        "퇴직금 예상"
+      ],
+      "keywords": [
+        "평균임금",
+        "재직일수",
+        "퇴사"
+      ],
+      "related": [
+        "salary-monthly-pay",
+        "life-tenure"
+      ]
+    },
+    {
+      "id": "text-keyboard-converter",
+      "title": "한영타 변환기",
+      "center": "문서·텍스트",
+      "url": "/tools/text/keyboard-converter/",
+      "image": "/assets/site-art/search-tools/keyboard-converter.svg",
+      "desc": "영문 상태로 잘못 친 한글과 한글 상태로 잘못 친 영문 자판 변환",
+      "aliases": [
+        "한영타 변환",
+        "영타 한글 변환",
+        "dkssudgktpdy"
+      ],
+      "keywords": [
+        "두벌식",
+        "키보드 변환",
+        "한영 변환"
+      ],
+      "related": [
+        "text-cleaner",
+        "case-converter"
+      ]
+    },
+    {
+      "id": "fun-random-picker",
+      "title": "랜덤 추첨기",
+      "center": "번호·랜덤",
+      "url": "/tools/fun/random-picker/",
+      "image": "/assets/site-art/search-tools/random-picker.svg",
+      "desc": "이름·번호·메뉴 후보를 중복 없이 무작위 추첨",
+      "aliases": [
+        "랜덤 추첨",
+        "이름 추첨기",
+        "랜덤 뽑기",
+        "당첨자 추첨"
+      ],
+      "keywords": [
+        "무작위",
+        "추첨",
+        "랜덤 순서"
+      ],
+      "related": [
+        "lotto-generator"
+      ]
+    },
+    {
+      "id": "life-parcel-volume-weight",
+      "title": "택배 박스 부피·부피무게 계산기",
+      "center": "생활·날짜",
+      "url": "/tools/life/parcel-volume-weight/",
+      "image": "/assets/site-art/search-tools/parcel-volume.svg",
+      "desc": "박스 부피와 국제배송 부피무게를 나눗수 기준으로 계산",
+      "aliases": [
+        "부피무게 계산기",
+        "택배 박스 계산",
+        "박스 부피 계산"
+      ],
+      "keywords": [
+        "국제배송",
+        "박스 크기",
+        "volumetric weight"
+      ],
+      "related": [
+        "quick-unit",
+        "living-cost"
+      ]
+    }
+  ]
+}

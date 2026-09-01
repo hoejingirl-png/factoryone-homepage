@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600">
+<rect width="960" height="600" fill="#ebe8e0"/>
+<rect x="38" y="38" width="884" height="524" rx="18" fill="#f8f7f3" stroke="#c8c3b8"/>
+<rect x="76" y="84" width="300" height="390" rx="14" fill="#191919"/>
+<text x="226" y="265" text-anchor="middle" font-family="Arial,sans-serif" font-size="86" font-weight="800" fill="#f5f2ea">₩</text>
+<text x="226" y="322" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" letter-spacing="3" fill="#aaa79f">FACTORY ONE</text>
+<line x1="425" y1="165" x2="842" y2="165" stroke="#d0cbc1"/>
+<text x="425" y="238" font-family="Arial,'Noto Sans KR',sans-serif" font-size="48" font-weight="800" fill="#171717">시급 계산기</text>
+<text x="425" y="292" font-family="Arial,'Noto Sans KR',sans-serif" font-size="22" fill="#6f6a62">일급 · 주급 · 월급</text>
+<rect x="425" y="354" width="120" height="11" rx="5" fill="#242424"/>
+<rect x="425" y="387" width="310" height="11" rx="5" fill="#c7c2b8"/>
+<rect x="425" y="420" width="245" height="11" rx="5" fill="#d6d1c8"/>
+<circle class="rc27-color-accent" cx="430" cy="300" r="6" fill="#ef766b" opacity=".9"/><circle class="rc27-color-accent" cx="446" cy="282" r="7" fill="#6f9ed0" opacity=".9"/><circle class="rc27-color-accent" cx="462" cy="300" r="8" fill="#70b18d" opacity=".9"/><circle class="rc27-color-accent" cx="478" cy="282" r="6" fill="#d5a64f" opacity=".9"/><circle class="rc27-color-accent" cx="494" cy="300" r="7" fill="#9b78bc" opacity=".9"/></svg>

@@ -1,0 +1,161 @@
+{
+  "version": "RC39",
+  "rule": "Free tools must feel substantial: never ship a one-input/one-result page when richer useful breakdowns are possible.",
+  "imagePolicy": {
+    "embeddedTitleText": false,
+    "cardAspectRatio": "1.55:1",
+    "heroAspectRatio": "wide",
+    "titleRenderedAsHTML": true,
+    "fit": "contain",
+    "safeMargin": true,
+    "uniquePerItem": true,
+    "doNotReuseGenericArtworkAcrossItems": true
+  },
+  "categories": {
+    "program": {
+      "art": "assets/site-art/program-hero.svg",
+      "layout": "catalogVisualCard"
+    },
+    "lisp": {
+      "art": "assets/site-art/lisp-hero.svg",
+      "layout": "catalogVisualCard"
+    },
+    "tool": {
+      "art": "assets/center-art/tools-hero.svg",
+      "layout": "visualCenterCard"
+    },
+    "app": {
+      "art": "assets/site-art/app-hero.svg",
+      "layout": "catalogVisualCard"
+    },
+    "game": {
+      "art": "assets/site-art/game-hero.svg",
+      "layout": "catalogVisualCard"
+    }
+  },
+  "homepage": {
+    "layout": "hero + quick tools + service cards + benefit strip",
+    "toolArtwork": "assets/site-art/tools-hero.svg",
+    "serviceImageFit": "contain",
+    "noEmbeddedHeadingText": true
+  },
+  "toolPageStandard": [
+    "purpose-specific artwork",
+    "rich inputs",
+    "multi-metric result report",
+    "copy/reset",
+    "calculation basis",
+    "worked example",
+    "FAQ",
+    "related tools",
+    "mobile responsive"
+  ],
+  "fileToolStandard": {
+    "centers": [
+      "PDF",
+      "IMAGE"
+    ],
+    "colorArtwork": true,
+    "uniqueArtworkPerTool": true,
+    "imageFit": "contain",
+    "sections": [
+      "actual tool",
+      "usage steps",
+      "processing basis",
+      "worked example",
+      "FAQ",
+      "related tools"
+    ],
+    "privacyWording": "Only claim browser/local processing where implementation supports it."
+  },
+  "centers": [
+    "finance",
+    "life",
+    "shopping"
+  ],
+  "rc28": {
+    "newTools": 9,
+    "financeTools": 3,
+    "lifeTools": 3,
+    "shoppingTools": 3,
+    "qualityRule": "multi-input + multi-metric report + formula + example + FAQ + related tools",
+    "colorArtwork": true,
+    "uniqueArtworkPerTool": true
+  },
+  "rc29": {
+    "newTools": 7,
+    "unitCenterTools": 4,
+    "textCenterTools": 6,
+    "principle": "purpose-specific tools, multi-step UI, colored unique artwork, browser-first processing"
+  },
+  "discoveryEngine": {
+    "catalog": "/data/tool-catalog.json",
+    "registeredTools": 52,
+    "search": [
+      "title",
+      "aliases",
+      "keywords",
+      "description",
+      "center"
+    ],
+    "queryNormalization": true,
+    "commonTypoAliases": true,
+    "rankedResults": true,
+    "automaticRelatedTools": true,
+    "futureToolRegistration": "Add one catalog entry; search and related recommendations consume the catalog automatically."
+  },
+  "productPolicy": {
+    "aa-elevation-offset-lisp": "free",
+    "factoryone-memo-center": "KRW 9900"
+  },
+  "paidSalesFlow": {
+    "programAndLisp": "Kakao Open Chat inquiry",
+    "contactUrl": "https://open.kakao.com/o/sGIWxiLi",
+    "freeItems": "direct download"
+  },
+  "paidProductMedia": {
+    "screenshots": "supported",
+    "layout": "2-column desktop / 1-column mobile",
+    "lightbox": true,
+    "memoCenterCount": 2
+  },
+  "seo": {
+    "domain": "https://factoryone.kr",
+    "robots": true,
+    "sitemap": true,
+    "uniqueMetadata": true,
+    "canonical": true,
+    "openGraph": true,
+    "homeJsonLd": [
+      "Organization",
+      "WebSite"
+    ],
+    "genericDynamicDetail": "noindex,follow"
+  },
+  "rc36": {
+    "newTools": 10,
+    "standard": [
+      "functional UI",
+      "multi-metric result",
+      "4-step guide",
+      "basis",
+      "worked example",
+      "FAQ 4+",
+      "related tools",
+      "unique artwork",
+      "SEO metadata"
+    ]
+  },
+  "rc39": {
+    "trafficMeasurementReady": true,
+    "events": [
+      "tool_action",
+      "tool_file_select",
+      "site_search",
+      "tool_search_result_click",
+      "related_tool_click",
+      "download_click",
+      "purchase_inquiry_click"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="540" height="360" viewBox="0 0 540 360">
+<rect width="540" height="360" rx="28" fill="#eee4f5"/>
+<circle cx="468" cy="54" r="64" fill="#fbf8fd" opacity=".7"/>
+<circle cx="58" cy="326" r="78" fill="#a684c4" opacity=".12"/>
+
+<rect x="110" y="112" width="230" height="206" rx="24" fill="#fbf8fd" stroke="#684c85" stroke-width="6"/>
+<rect x="110" y="112" width="230" height="52" rx="24" fill="#a684c4"/>
+<circle cx="164" cy="110" r="10" fill="#684c85"/><circle cx="286" cy="110" r="10" fill="#684c85"/>
+<g fill="#684c85" opacity=".8"><circle cx="160" cy="205" r="10"/><circle cx="210" cy="205" r="10"/><circle cx="260" cy="205" r="10"/><circle cx="160" cy="250" r="10"/><circle cx="210" cy="250" r="10"/><circle cx="260" cy="250" r="10"/></g>
+<circle cx="405" cy="226" r="64" fill="#a684c4" opacity=".25"/>
+<path d="M405 180v47l34 18" stroke="#684c85" stroke-width="9" fill="none" stroke-linecap="round"/>
+<circle cx="405" cy="226" r="58" fill="none" stroke="#684c85" stroke-width="6"/>
+</svg>

@@ -1,0 +1,64 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>생활비 계산기 | 무료 웹도구 - Factory One</title>
+<meta name="description" content="단순 합계가 아니라 월 소득 대비 고정비·변동비·구독료 비중과 연간 지출, 예상 잔액까지 한 번에 분석합니다.">
+<link rel="canonical" href="https://factoryone.kr/tools/living-cost-calculator/"><link rel="stylesheet" href="../../style.css"><meta name="robots" content="index,follow"><meta property="og:site_name" content="Factory One"><meta property="og:title" content="생활비 계산기 | 무료 웹도구 - Factory One"><meta property="og:description" content="단순 합계가 아니라 월 소득 대비 고정비·변동비·구독료 비중과 연간 지출, 예상 잔액까지 한 번에 분석합니다."><meta property="og:type" content="website"><meta property="og:url" content="https://factoryone.kr/tools/living-cost-calculator/"><script src="/assets/analytics.js" defer></script></head><body><div class="wrap"><header><div class="logo" onclick="location.href='../../index.html'">FACTORY ONE</div><div class="nav"><button onclick="location.href='../../index.html'">HOME</button><button onclick="location.href='../../index.html'">TOOLS</button></div><input class="search" placeholder="SEARCH" disabled></header><main class="toolShell">
+<section class="toolHero"><div><div class="breadcrumbs">홈 · 무료 웹도구 · 생활비 계산기</div><h1>생활비 계산기</h1><p>단순 합계가 아니라 월 소득 대비 고정비·변동비·구독료 비중과 연간 지출, 예상 잔액까지 한 번에 분석합니다.</p></div><div class="toolHeroMeta"><span class="toolBadge">월 지출</span><span class="toolBadge">연간 환산</span><span class="toolBadge">저축 가능액</span><span class="toolBadge">비중 분석</span></div></section>
+<div class="toolLayout"><div class="toolMain">
+<section class="panel"><h2>1. 월 소득과 목표</h2><div class="fieldGrid three"><div class="field2"><label>월 실수령액</label><input id="income" type="number" min="0" value="3000000"></div><div class="field2"><label>월 저축 목표</label><input id="saveGoal" type="number" min="0" value="500000"></div><div class="field2"><label>예비비 목표</label><input id="bufferGoal" type="number" min="0" value="200000"></div></div></section>
+<section class="panel"><h2>2. 생활비 입력</h2><div class="costRows" id="costRows"></div><div class="actionsRow"><button class="primaryBtn" id="analyze">생활비 분석하기</button><button class="secondaryBtn" id="sample">예시값 불러오기</button><button class="secondaryBtn" id="clear">전체 초기화</button></div></section>
+<section class="panel"><h2>3. 분석 결과</h2><div class="resultCard"><div class="resultBig" id="headline">분석 버튼을 눌러주세요.</div><div class="resultSub" id="summary">월 지출과 연간 지출, 남는 금액을 계산합니다.</div><div class="statGrid"><div class="stat"><span>월 생활비</span><b id="monthly">-</b></div><div class="stat"><span>연간 생활비</span><b id="yearly">-</b></div><div class="stat"><span>월 예상 잔액</span><b id="remain">-</b></div></div></div>
+<div class="progressGroup"><div><div class="analysisItem"><span>고정비 비중</span><strong id="fixedPct">-</strong></div><div class="progressLine"><div id="fixedBar" class="progressFill"></div></div></div><div><div class="analysisItem"><span>변동비 비중</span><strong id="variablePct">-</strong></div><div class="progressLine"><div id="variableBar" class="progressFill"></div></div></div><div><div class="analysisItem"><span>구독료 비중</span><strong id="subPct">-</strong></div><div class="progressLine"><div id="subBar" class="progressFill"></div></div></div></div></section>
+<section class="toolFooterInfo"><h2>생활비 계산기를 이렇게 활용하세요</h2><p>월 생활비만 보는 것보다 연간 환산액과 소득 대비 비율을 함께 보면 어떤 지출을 먼저 줄일지 판단하기 쉽습니다. 특히 작은 구독료가 여러 개 쌓이면 연간 금액이 커질 수 있습니다.</p></section>
+</div><aside class="toolSide"><section class="panel"><h2>지출 진단</h2><div class="analysisBox" id="diagnosis"><div class="analysisItem"><span>상태</span><strong>입력 대기</strong></div></div></section><section class="panel"><h2>다른 무료 도구</h2><div class="sideList"><a href="../unit-converter/">단위 변환기<small>무료 웹도구 바로가기</small></a><a href="../shoe-size-converter/">신발 사이즈 변환기<small>무료 웹도구 바로가기</small></a><a href="../lotto-generator/">로또 번호 생성기<small>무료 웹도구 바로가기</small></a></div></section></aside></div>
+<section class="commentsSection">
+  <div class="commentsHead">
+    <div><h2>댓글 · 사용후기</h2></div>
+    <p>질문이나 사용 후기를 남겨주세요.<br>현재 댓글은 GitHub 계정 로그인이 필요합니다.</p>
+  </div>
+  <div class="commentsBox">
+    <div class="commentsLocalNote">로컬 미리보기에서는 댓글이 정상 표시되지 않을 수 있습니다. 실제 factoryone.kr 배포 후 사용합니다.</div>
+    <script src="https://utteranc.es/client.js"
+            repo="hoejingri-png/factoryone-homepage"
+            issue-term="pathname"
+            label="웹도구 댓글"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+</section>
+
+</main></div>
+<script>
+const cats=[
+['housing','주거비','fixed'],['manage','관리비','fixed'],['phone','통신비','fixed'],['insurance','보험료','fixed'],['subscription','구독료','subscription'],['loan','대출·할부','fixed'],['food','식비','variable'],['transport','교통·차량','variable'],['shopping','쇼핑','variable'],['leisure','여가·취미','variable'],['medical','의료·건강','variable'],['other','기타','variable']
+];
+const rows=document.getElementById('costRows');
+rows.innerHTML=cats.map(([id,n,t])=>`<div class="costRow"><span>${n}</span><input id="${id}" type="number" min="0" value="0" inputmode="numeric"><b>원 / 월</b></div>`).join('');
+const won=n=>(Math.round(n)||0).toLocaleString('ko-KR')+'원';
+function analyze(){
+ const income=Math.max(0,Number(document.getElementById('income').value)||0);
+ const saveGoal=Math.max(0,Number(document.getElementById('saveGoal').value)||0);
+ const buffer=Math.max(0,Number(document.getElementById('bufferGoal').value)||0);
+ let fixed=0,variable=0,sub=0,total=0;
+ cats.forEach(([id,_,type])=>{const v=Math.max(0,Number(document.getElementById(id).value)||0);total+=v;if(type==='fixed')fixed+=v;else if(type==='subscription'){sub+=v;fixed+=v}else variable+=v;});
+ const remain=income-total, ratio=income?total/income*100:0;
+ monthly.textContent=won(total);yearly.textContent=won(total*12);remain.textContent=won(remain);
+ headline.textContent=income?`소득의 ${ratio.toFixed(1)}%를 생활비로 사용 중`:'월 소득을 입력하세요.';
+ summary.textContent=`연간 예상 생활비 ${won(total*12)} · 연간 구독료 ${won(sub*12)}`;
+ const fp=total?fixed/total*100:0,vp=total?variable/total*100:0,sp=total?sub/total*100:0;
+ fixedPct.textContent=fp.toFixed(1)+'%';variablePct.textContent=vp.toFixed(1)+'%';subPct.textContent=sp.toFixed(1)+'%';
+ fixedBar.style.width=Math.min(fp,100)+'%';variableBar.style.width=Math.min(vp,100)+'%';subBar.style.width=Math.min(sp,100)+'%';
+ let msgs=[];
+ if(income && remain<0)msgs.push(['주의','월 소득보다 지출이 '+won(Math.abs(remain))+' 많습니다.']);
+ else if(income)msgs.push(['예상 잔액',won(remain)]);
+ if(income && remain>=saveGoal+buffer)msgs.push(['목표 달성','저축·예비비 목표를 반영해도 '+won(remain-saveGoal-buffer)+' 남습니다.']);
+ else if(income)msgs.push(['목표 부족',won(Math.max(0,saveGoal+buffer-remain))]);
+ msgs.push(['연간 구독료',won(sub*12)]);
+ diagnosis.innerHTML=msgs.map(x=>`<div class="analysisItem"><span>${x[0]}</span><strong>${x[1]}</strong></div>`).join('');
+}
+document.getElementById('analyze').onclick=analyze;
+document.getElementById('sample').onclick=()=>{income.value=3200000;saveGoal.value=600000;bufferGoal.value=200000;const s={housing:700000,manage:120000,phone:90000,insurance:180000,subscription:65000,loan:200000,food:450000,transport:220000,shopping:180000,leisure:150000,medical:50000,other:100000};Object.entries(s).forEach(([k,v])=>document.getElementById(k).value=v);analyze();};
+document.getElementById('clear').onclick=()=>{cats.forEach(([id])=>document.getElementById(id).value=0);analyze();};
+analyze();
+</script><script src="/assets/tool-discovery.js"></script></body></html>

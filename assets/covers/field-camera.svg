@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560">
+<rect width="900" height="560" fill="#eeece6"/>
+<rect x="30" y="30" width="840" height="500" fill="#f8f7f3" stroke="#c9c5bc"/>
+<text x="65" y="82" font-family="Arial,sans-serif" font-size="16" letter-spacing="3" fill="#77736b">FACTORY ONE · 앱</text>
+<rect x="315" y="105" width="270" height="390" rx="34" fill="none" stroke="#171717" stroke-width="16"/><circle cx="450" cy="450" r="13" fill="#171717"/><rect x="350" y="160" width="200" height="220" fill="none" stroke="#171717" stroke-width="10"/>
+<text x="65" y="505" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#171717">현장 기록 카메라</text>
+</svg>

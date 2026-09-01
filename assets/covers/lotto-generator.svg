@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560">
+<rect width="900" height="560" fill="#eeece6"/>
+<rect x="30" y="30" width="840" height="500" fill="#f8f7f3" stroke="#c9c5bc"/>
+<text x="65" y="82" font-family="Arial,sans-serif" font-size="16" letter-spacing="3" fill="#77736b">FACTORY ONE · 웹도구</text>
+<rect x="225" y="155" width="450" height="260" fill="none" stroke="#171717" stroke-width="14"/><text x="450" y="315" text-anchor="middle" font-family="Arial" font-size="74" font-weight="800" fill="#171717">LOTTO</text>
+<text x="65" y="505" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#171717">로또 번호 생성기</text>
+</svg>

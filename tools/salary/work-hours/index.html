@@ -1,0 +1,37 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>근무시간 계산기 - 출퇴근·휴게시간·월 근로시간 | 무료 웹도구 - Factory One</title><meta name="description" content="출근과 퇴근시간, 휴게시간, 주 근무일을 입력해 1일·주·월 순 근로시간과 8시간·40시간 초과분을 한 번에 확인합니다.">
+<link rel="canonical" href="https://factoryone.kr/tools/salary/work-hours/"><link rel="stylesheet" href="../../../style.css"><meta name="robots" content="index,follow"><meta property="og:site_name" content="Factory One"><meta property="og:title" content="근무시간 계산기 - 출퇴근·휴게시간·월 근로시간 | 무료 웹도구 - Factory One"><meta property="og:description" content="출근과 퇴근시간, 휴게시간, 주 근무일을 입력해 1일·주·월 순 근로시간과 8시간·40시간 초과분을 한 번에 확인합니다."><meta property="og:type" content="website"><meta property="og:url" content="https://factoryone.kr/tools/salary/work-hours/"><script src="/assets/analytics.js" defer></script></head>
+<body><div class="wrap"><header class="siteHeader">
+<div class="logo" onclick="location.href='../../../index.html'">FACTORY <span>ONE</span></div>
+<nav class="nav"><a href="../../../index.html">HOME</a><a href="../../../programs/">PROGRAM</a><a href="../../../lisp/">LISP</a><a href="../../../apps/">APPS</a><a class="active" href="../../../tools/">TOOLS</a><a href="../../../games/">GAMES</a></nav>
+<a class="headerToolLink" href="../../">도구 찾기</a></header><main class="toolArticle">
+<div class="breadcrumbs"><a href="../../">TOOLS</a> / <a href="../">급여·근무 센터</a> / 근무시간 계산기 - 출퇴근·휴게시간·월 근로시간</div>
+<section class="richToolHero"><div><div class="eyebrow">SALARY · TIME CALCULATOR</div><h1>근무시간 계산기 - 출퇴근·휴게시간·월 근로시간</h1><p>출근과 퇴근시간, 휴게시간, 주 근무일을 입력해 1일·주·월 순 근로시간과 8시간·40시간 초과분을 한 번에 확인합니다.</p><div class="richBadges"><span>익일 퇴근 지원</span><span>휴게시간 제외</span><span>주·월 환산</span></div></div><img src="../../../assets/covers/work-hours.svg" alt="근무시간 계산기 - 출퇴근·휴게시간·월 근로시간 대표 이미지"></section>
+<section class="richCalc"><div class="richCalcHead"><div><span>WORK TIME REPORT</span><h2>출퇴근·휴게시간 입력</h2></div><div class="richCalcActions"><button class="richBtn ghost" id="resetBtn">초기화</button><button class="richBtn" id="copyBtn">결과 복사</button></div></div>
+<div class="richInputs">
+<label><span>출근시간</span><div class="richInputUnit"><input id="start" type="time" value="09:00"></div></label>
+<label><span>퇴근시간</span><div class="richInputUnit"><input id="end" type="time" value="18:00"></div><small>익일 퇴근도 자동 인식</small></label>
+<label><span>휴게시간</span><div class="richInputUnit"><input id="breakM" type="number" min="0" value="60"><b>분</b></div></label>
+<label><span>주 근무일</span><div class="richInputUnit"><input id="days" type="number" min="1" max="7" value="5"><b>일</b></div></label>
+<label><span>월 평균 주수</span><div class="richInputUnit"><input id="weeks" type="number" min="1" max="6" step=".001" value="4.345"><b>주</b></div></label>
+<label><span>시급(선택)</span><div class="richInputUnit"><input id="wage" type="number" min="0" value="10320"><b>원</b></div><small>시간값을 임금으로도 확인</small></label>
+</div>
+<div class="richResults"><div class="richResultsTop"><span>TIME BREAKDOWN</span><b id="shift">-</b></div><div class="richResultGrid">
+<div class="richMetric"><span>체류시간</span><strong id="gross">-</strong><small>출근~퇴근 전체</small></div>
+<div class="richMetric"><span>1일 순 근로시간</span><strong id="net">-</strong><small>휴게시간 제외</small></div>
+<div class="richMetric"><span>주 순 근로시간</span><strong id="weekly">-</strong><small>1일 × 근무일</small></div>
+<div class="richMetric"><span>월 순 근로시간</span><strong id="monthly">-</strong><small>주 시간 × 월 평균 주수</small></div>
+<div class="richMetric"><span>1일 8시간 초과</span><strong id="dayOT">-</strong><small>단순 시간 구분</small></div>
+<div class="richMetric"><span>주 40시간 초과</span><strong id="weekOT">-</strong><small>단순 시간 구분</small></div>
+<div class="richMetric"><span>1일 기본 시급액</span><strong id="dayPay">-</strong><small>가산수당 제외</small></div>
+<div class="richMetric"><span>월 기본 시급액</span><strong id="monthPay">-</strong><small>주휴·가산수당 제외</small></div>
+</div></div></section>
+<div class="richExplain"><section><h2>사용방법</h2><ol><li>출근·퇴근 시간을 선택합니다.</li><li>점심시간 등 실제 휴게시간을 분 단위로 입력합니다.</li><li>주 근무일과 월 평균 주수를 입력합니다.</li><li>순 근로시간과 8시간·40시간 초과시간을 따로 확인합니다.</li></ol></section><section><h2>계산 기준</h2><div class="richFormula">1일 순 근로시간 = 퇴근시각 − 출근시각 − 휴게시간<br>주 근로시간 = 1일 순 근로시간 × 주 근무일<br>월 환산 = 주 근로시간 × 월 평균 주수</div><p>8시간·40시간 초과값은 시간 구분을 위한 참고치이며 법정 연장근로 판단 자체를 대신하지 않습니다.</p></section></div>
+<div class="richExplain"><section><h2>실제 사용 예시</h2><p>09:00 출근, 18:00 퇴근, 휴게 60분이면 체류시간은 9시간, 순 근로시간은 8시간입니다. 주 5일이면 40시간, 월 4.345주 기준 약 173.8시간으로 환산됩니다.</p></section><section><h2>자주 묻는 질문</h2><h3>야간에 출근해서 다음날 퇴근해도 되나요?</h3><p>네. 퇴근시각이 출근시각보다 빠르면 익일 퇴근으로 계산합니다.</p><h3>휴게시간도 임금에 포함되나요?</h3><p>이 도구에서는 휴게시간을 순 근로시간에서 제외합니다. 실제 유급 여부는 계약에 따라 확인하세요.</p></section></div>
+<section class="richRelated"><div class="titleRow"><h2>같이 쓰면 좋은 도구</h2><span>RELATED TOOLS</span></div><div class="richRelatedGrid"><a href="../hourly-wage/"><b>시급 계산기</b><span>시간을 급여로 환산</span></a><a href="../monthly-pay/"><b>월급 계산기</b><span>월 예상급여 상세보고서</span></a><a href="../weekly-holiday/"><b>주휴수당 계산기</b><span>주휴 기본요건 확인</span></a></div></section>
+</main></div><script>
+const $=id=>document.getElementById(id), fmt=n=>{let h=Math.floor(n),m=Math.round((n-h)*60);if(m===60){h++;m=0}return h+'시간 '+m+'분'}, won=n=>Math.round(n).toLocaleString('ko-KR')+'원';
+function mins(v){let [h,m]=v.split(':').map(Number);return h*60+m}
+function calc(){let s=mins($('start').value),e=mins($('end').value);if(e<=s)e+=1440;const gross=(e-s)/60,br=(+$('breakM').value||0)/60,net=Math.max(0,gross-br),days=+$('days').value||0,wks=+$('weeks').value||0,w=+$('wage').value||0,weekly=net*days,monthly=weekly*wks;
+$('shift').textContent=$('start').value+' → '+$('end').value;$('gross').textContent=fmt(gross);$('net').textContent=fmt(net);$('weekly').textContent=fmt(weekly);$('monthly').textContent=fmt(monthly);$('dayOT').textContent=fmt(Math.max(0,net-8));$('weekOT').textContent=fmt(Math.max(0,weekly-40));$('dayPay').textContent=won(net*w);$('monthPay').textContent=won(monthly*w)}
+document.querySelectorAll('.richCalc input').forEach(x=>x.addEventListener('input',calc));$('resetBtn').onclick=()=>{$('start').value='09:00';$('end').value='18:00';$('breakM').value=60;$('days').value=5;$('weeks').value=4.345;$('wage').value=10320;calc()};$('copyBtn').onclick=()=>navigator.clipboard?.writeText(`1일 ${$('net').textContent} / 주 ${$('weekly').textContent} / 월 ${$('monthly').textContent}`);calc();</script><script src="/assets/tool-discovery.js"></script></body></html>

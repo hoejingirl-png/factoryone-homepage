@@ -1,0 +1,99 @@
+<!doctype html><html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>부가세 계산기 | 무료 웹도구 - Factory One</title>
+<meta name="description" content="‘부가세 포함 금액’과 ‘공급가액’ 중 무엇을 알고 있는지 먼저 선택하세요. 공급가액·세액·합계금액을 한눈에 분리해 보여줍니다.">
+<link rel="canonical" href="https://factoryone.kr/tools/business/vat/"><link rel="stylesheet" href="../../../style.css"><meta name="robots" content="index,follow"><meta property="og:site_name" content="Factory One"><meta property="og:title" content="부가세 계산기 | 무료 웹도구 - Factory One"><meta property="og:description" content="‘부가세 포함 금액’과 ‘공급가액’ 중 무엇을 알고 있는지 먼저 선택하세요. 공급가액·세액·합계금액을 한눈에 분리해 보여줍니다."><meta property="og:type" content="website"><meta property="og:url" content="https://factoryone.kr/tools/business/vat/"><script src="/assets/analytics.js" defer></script></head>
+<body><div class="wrap"><header>
+  <div class="logo" onclick="location.href='../../../index.html'">FACTORY ONE</div>
+  <div class="nav">
+    <a href="../../../programs/">PROGRAM</a>
+    <a href="../../../lisp/">LISP</a>
+    <a href="../../../tools/">TOOLS</a>
+    <a href="../../../games/">GAMES</a>
+    <a href="../../../apps/">APPS</a>
+  </div>
+  <a class="headerToolLink" href="../../../tools/">도구 찾기</a>
+</header><main class="toolArticle">
+<div class="breadcrumbs"><a href="../../">TOOLS</a> / <a href="../">사업·세금 센터</a> / 부가세 계산기</div>
+
+<section class="toolArticleHero">
+ <div><div class="eyebrow">BUSINESS · FREE TOOL</div><h1>부가세 계산기</h1>
+ <p>‘부가세 포함 금액’과 ‘공급가액’ 중 무엇을 알고 있는지 먼저 선택하세요. 공급가액·세액·합계금액을 한눈에 분리해 보여줍니다.</p>
+ <div class="heroPills"><span>양방향 계산</span><span>10% 간편계산</span><span>여러 금액 일괄 계산</span></div></div>
+ <img src="../../../assets/covers/vat-calculator.svg" alt="부가세 계산기 대표 이미지">
+</section>
+
+<section class="calculatorPro">
+ <div class="calcHead"><div><span>VAT CALCULATOR</span><h2>계산 기준 선택</h2></div></div>
+ <div class="modeTabs" role="tablist">
+  <button class="modeTab active" data-mode="total" type="button">합계금액에서 분리</button>
+  <button class="modeTab" data-mode="supply" type="button">공급가액에 부가세 추가</button>
+ </div>
+ <div class="singleVat">
+   <label><span id="vatInputLabel">부가세 포함 합계금액</span><div class="inputUnit"><input id="vatAmount" type="number" min="0" step="1" value="110000"><b>원</b></div></label>
+   <button id="vatCalcBtn" class="primaryBtn">계산하기</button>
+ </div>
+ <div class="reportResult">
+   <div class="reportMain"><span id="vatHeadline">합계금액</span><strong id="vatTotal">110,000원</strong><small>일반 10% 기준 간편 계산</small></div>
+   <div class="reportStats threeOnly"><div><span>공급가액</span><b id="vatSupply">100,000원</b></div><div><span>부가세</span><b id="vatTax">10,000원</b></div><div><span>합계금액</span><b id="vatTotal2">110,000원</b></div></div>
+ </div>
+
+ <div class="batchBox">
+  <div class="batchTitle"><div><span>MULTI CALC</span><h3>여러 금액 한 번에 계산</h3></div><button id="clearBatch" class="outlineBtn" type="button">비우기</button></div>
+  <p>금액을 한 줄에 하나씩 입력하세요. 견적서나 거래내역을 간단히 확인할 때 편합니다.</p>
+  <textarea id="batchInput">110000
+55000
+330000</textarea>
+  <button id="batchCalc" class="secondaryBtn" type="button">일괄 계산</button>
+  <div class="batchTableWrap"><table class="batchTable"><thead><tr><th>입력금액</th><th>공급가액</th><th>부가세</th><th>합계</th></tr></thead><tbody id="batchBody"></tbody></table></div>
+ </div>
+</section>
+
+<section class="articleSection"><div class="sectionKicker">HOW TO USE</div><h2>부가세 계산기 사용방법</h2>
+<p>영수증이나 거래명세서에 적힌 금액이 이미 부가세를 포함하고 있다면 <strong>‘합계금액에서 분리’</strong>를 선택하세요. 반대로 견적서의 공급가액만 알고 있고 세액과 최종 합계를 계산해야 한다면 <strong>‘공급가액에 부가세 추가’</strong>를 선택하면 됩니다.</p>
+<div class="stepCards"><div><b>01</b><h3>계산 방향 선택</h3><p>110만원이 최종 결제액인지, 100만원 공급가액인지부터 구분합니다.</p></div><div><b>02</b><h3>금액 입력</h3><p>쉼표 없이 숫자만 넣어도 결과는 천 단위 구분기호를 붙여 표시됩니다.</p></div><div><b>03</b><h3>여러 건 일괄 계산</h3><p>여러 거래 금액은 한 줄에 하나씩 붙여 넣고 일괄 계산할 수 있습니다.</p></div></div>
+</section>
+
+<section class="articleSection"><div class="sectionKicker">CALCULATION GUIDE</div><h2>포함금액과 별도금액은 계산식이 다릅니다</h2>
+<div class="formulaBox"><div><span>부가세 별도</span><b>공급가액 × 10% = 부가세</b></div><div><span>최종 합계</span><b>공급가액 × 1.1</b></div><div><span>부가세 포함금액 분리</span><b>합계금액 ÷ 1.1 = 공급가액</b></div><div><span>포함금액의 세액</span><b>합계금액 − 공급가액</b></div></div>
+<p>예를 들어 공급가액이 100,000원이면 10% 간편계산 기준 부가세는 10,000원이고 합계는 110,000원입니다. 반대로 합계금액 110,000원에서 분리하면 공급가액 100,000원과 부가세 10,000원이 됩니다.</p>
+</section>
+
+<section class="articleSection"><div class="sectionKicker">EXAMPLE</div><h2>실제 숫자로 보는 계산 예시</h2>
+<div class="exampleReport"><div><span>공급가액</span><b>1,000,000원</b></div><div><span>부가세</span><b>100,000원</b></div><div class="accent"><span>최종 합계</span><b>1,100,000원</b></div></div>
+<p>이 계산기는 일반적인 10% 계산을 빠르게 확인하기 위한 도구입니다. 면세, 영세율, 간이과세 등 거래 형태에 따라 실제 세무처리가 달라질 수 있으므로 신고나 세금계산서 발행 단계에서는 거래 유형을 반드시 확인하세요.</p>
+</section>
+
+<section class="articleSection"><div class="sectionKicker">FAQ</div><h2>자주 묻는 질문</h2>
+<details class="faqDetail"><summary>110만원에 부가세가 포함되어 있으면 세액은 얼마인가요?</summary><p>10% 일반 계산 기준으로 공급가액은 1,000,000원, 부가세는 100,000원입니다.</p></details>
+<details class="faqDetail"><summary>100만원에 ‘부가세 별도’라고 적혀 있으면 얼마를 결제하나요?</summary><p>일반 10% 계산 기준으로 부가세 100,000원을 더한 총 1,100,000원입니다.</p></details>
+<details class="faqDetail"><summary>이 결과를 그대로 세금 신고에 써도 되나요?</summary><p>이 도구는 일반적인 산술 계산용입니다. 실제 신고에는 면세·영세율·간이과세 등 예외가 있을 수 있으므로 국세청 안내 또는 세무전문가를 통해 거래의 과세 여부를 확인해야 합니다.</p></details>
+</section>
+
+<section class="relatedTools"><h2>같이 사용하면 좋은 도구</h2><div class="relatedGrid"><a href="../../discount-calculator/"><b>할인 계산기</b><span>할인 전후 가격 계산 →</span></a><a href="../../living-cost-calculator/"><b>생활비 계산기</b><span>월 지출 합계 확인 →</span></a><a href="../../character-counter/"><b>글자수 세기</b><span>문서 작성 보조 →</span></a></div></section>
+<section class="sourceNote"><b>주의</b><p>표준적인 10% 부가세 산술 계산을 위한 참고용 도구입니다. 실제 과세 여부와 신고 방식은 거래 유형에 따라 달라질 수 있습니다.</p></section>
+</main></div>
+<script>
+const money=n=>Math.round(n).toLocaleString('ko-KR')+'원';let mode='total';
+function calcOne(amount){
+ if(mode==='total'){const supply=amount/1.1;return {supply,tax:amount-supply,total:amount};}
+ const tax=amount*.1;return {supply:amount,tax,total:amount+tax};
+}
+function render(){
+ const amount=Math.max(0,Number(document.getElementById('vatAmount').value)||0),r=calcOne(amount);
+ document.getElementById('vatSupply').textContent=money(r.supply);document.getElementById('vatTax').textContent=money(r.tax);
+ document.getElementById('vatTotal').textContent=money(r.total);document.getElementById('vatTotal2').textContent=money(r.total);
+}
+document.querySelectorAll('.modeTab').forEach(btn=>btn.addEventListener('click',()=>{
+ document.querySelectorAll('.modeTab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');mode=btn.dataset.mode;
+ document.getElementById('vatInputLabel').textContent=mode==='total'?'부가세 포함 합계금액':'공급가액';
+ render();renderBatch();
+}));
+document.getElementById('vatCalcBtn').addEventListener('click',render);document.getElementById('vatAmount').addEventListener('input',render);
+function renderBatch(){
+ const nums=document.getElementById('batchInput').value.split(/\n|,/).map(v=>Number(v.trim().replace(/[^0-9.-]/g,''))).filter(v=>Number.isFinite(v)&&v>=0).slice(0,50);
+ document.getElementById('batchBody').innerHTML=nums.map(n=>{const r=calcOne(n);return `<tr><td>${money(n)}</td><td>${money(r.supply)}</td><td>${money(r.tax)}</td><td>${money(r.total)}</td></tr>`;}).join('');
+}
+document.getElementById('batchCalc').addEventListener('click',renderBatch);document.getElementById('clearBatch').addEventListener('click',()=>{document.getElementById('batchInput').value='';renderBatch();});
+render();renderBatch();
+</script><script src="/assets/tool-discovery.js"></script></body></html>

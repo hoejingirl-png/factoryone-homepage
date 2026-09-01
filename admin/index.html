@@ -1,0 +1,47 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Factory One 상품 등록 도우미</title><link rel="stylesheet" href="../style.css"><meta name="robots" content="noindex,follow"><script src="/assets/analytics.js" defer></script></head><body><div class="wrap">
+<header><div class="logo" onclick="location.href='../index.html'">FACTORY ONE</div><div class="nav"><button onclick="location.href='../index.html'">HOME</button></div></header>
+<main class="toolShell"><section class="toolHero"><div><div class="breadcrumbs">관리 도구 · 로컬 전용</div><h1>프로그램 · LISP 등록 도우미</h1><p>새 프로그램이나 LISP 정보를 입력하면 catalog.json에 넣을 항목을 자동으로 만들어줍니다. 실제 GitHub 업로드는 다음 단계에서 자동화할 수 있습니다.</p></div><div class="toolHeroMeta"><span class="toolBadge">PROGRAM</span><span class="toolBadge">LISP</span><span class="toolBadge">JSON 생성</span></div></section>
+<div class="adminGrid">
+<section class="adminPanel"><h2>기본 정보</h2>
+<div class="field2"><label>종류</label><select id="type"><option value="program">프로그램</option><option value="lisp">LISP</option></select></div>
+<div class="field2"><label>고유 ID (영문)</label><input id="id" placeholder="예: field-photo"></div>
+<div class="field2"><label>이름</label><input id="title" placeholder="프로그램 이름"></div>
+<div class="field2"><label>한 줄 설명</label><input id="summary" placeholder="무엇을 하는 프로그램인지"></div>
+</section>
+<section class="adminPanel"><h2>판매 · 배포</h2>
+<div class="field2"><label>무료 / 유료</label><select id="priceType"><option value="free">무료</option><option value="paid">유료</option></select></div>
+<div class="field2"><label>가격</label><input id="price" type="number" value="0" min="0"></div>
+<div class="field2"><label>플랫폼</label><input id="platform" value="WINDOWS"></div>
+<div class="field2"><label>버전</label><input id="version" value="1.0.0"></div>
+</section>
+<section class="adminPanel"><h2>다운로드 · 영상</h2>
+<div class="field2"><label>다운로드 URL</label><input id="downloadUrl" placeholder="downloads/파일명.zip"></div>
+<div class="field2"><label>구매 URL</label><input id="purchaseUrl" placeholder="유료일 때 사용"></div>
+<div class="field2"><label>유튜브 URL</label><input id="videoUrl" placeholder="https://youtube.com/..."></div>
+<div class="field2"><label>대표 텍스트</label><input id="cover" value="APP"></div>
+<div class="field2"><label>대표 이미지 경로</label><input id="coverImage" placeholder="assets/covers/프로그램ID.webp"></div>
+<div class="field2"><label>스크린샷 경로 (쉼표 구분)</label><input id="screenshots" placeholder="assets/screenshots/a.webp, assets/screenshots/b.webp"></div>
+</section>
+<section class="adminPanel"><h2>LISP 전용</h2>
+<div class="field2"><label>실행 명령어</label><input id="command" placeholder="예: ASUM"></div>
+<div class="field2"><label>AutoCAD 지원 버전</label><input id="cadVersions" placeholder="2022,2023,2024,2025,2026"></div>
+<p class="inlineHelp">프로그램인 경우 비워두면 됩니다.</p>
+</section>
+<section class="adminPanel adminFull"><h2>설명 항목</h2>
+<div class="field2"><label>주요 기능 (한 줄에 하나)</label><textarea id="features" class="codeOut" style="min-height:120px;background:#fff;color:#171717;font-family:inherit" placeholder="파일 자동 정리&#10;원클릭 실행&#10;작업 로그"></textarea></div>
+<div class="actionsRow"><button id="make" class="primaryBtn">등록 데이터 만들기</button><button id="downloadJson" class="secondaryBtn">product.json 저장</button></div>
+</section>
+<section class="adminPanel adminFull"><h2>생성 결과</h2><textarea id="output" class="codeOut" readonly></textarea></section>
+<section class="adminPanel adminFull"><h2>실제 등록 순서</h2><div class="productSteps">
+<div class="productStep">프로그램 또는 LISP의 ZIP 파일과 대표 이미지·스크린샷을 준비합니다.</div>
+<div class="productStep">이 화면에서 정보를 입력하고 product.json을 저장합니다.</div>
+<div class="productStep">사이트의 products/programs/ 또는 products/lisp/ 아래에 고유 ID 폴더를 만듭니다.</div>
+<div class="productStep">product.json, 이미지, 다운로드 ZIP을 같은 제품 폴더에 넣습니다.</div>
+<div class="productStep">catalog.json에 생성된 항목을 추가하면 메인과 상세 페이지에서 자동 노출됩니다.</div>
+</div></section>
+</div></main></div>
+<script>
+function data(){const type=document.getElementById('type').value,priceType=document.getElementById('priceType').value;const o={id:id.value.trim(),type,title:title.value.trim(),summary:summary.value.trim(),priceType,price:Number(price.value)||0,platform:platform.value.trim(),cover:cover.value.trim()||'APP',coverImage:coverImage.value.trim(),screenshots:screenshots.value.split(',').map(x=>x.trim()).filter(Boolean),downloadUrl:downloadUrl.value.trim(),purchaseUrl:purchaseUrl.value.trim(),videoUrl:videoUrl.value.trim(),version:version.value.trim(),updated:new Date().toISOString().slice(0,10),features:features.value.split('\\n').map(x=>x.trim()).filter(Boolean)};if(type==='lisp'){o.command=command.value.trim();o.cadVersions=cadVersions.value.split(',').map(x=>x.trim()).filter(Boolean);}return o}
+function render(){output.value=JSON.stringify(data(),null,2)}
+make.onclick=render;downloadJson.onclick=()=>{const blob=new Blob([JSON.stringify(data(),null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='product.json';a.click()};render();
+</script></body></html>

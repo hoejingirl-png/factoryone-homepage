@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560">
+<rect width="900" height="560" fill="#eeece6"/>
+<rect x="30" y="30" width="840" height="500" fill="#f8f7f3" stroke="#c9c5bc"/>
+<text x="65" y="82" font-family="Arial,sans-serif" font-size="16" letter-spacing="3" fill="#77736b">FACTORY ONE · 웹도구</text>
+<path d="M275 110 H500 L610 220 V450 H275 Z" fill="none" stroke="#171717" stroke-width="15"/><path d="M500 110 V220 H610" fill="none" stroke="#171717" stroke-width="15"/><text x="442" y="350" text-anchor="middle" font-family="Arial" font-size="72" font-weight="800" fill="#171717">PDF</text>
+<text x="65" y="505" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#171717">PDF 도구 센터</text>
+</svg>

@@ -1,25 +1,19 @@
-Factory One Website V3
+Factory One V4 B 데이터 엔진 03
 
-실행 방법
-1. ZIP 압축을 풉니다.
-2. Factory_One_Website_V3 폴더의 index.html을 더블클릭합니다.
-3. Chrome 또는 Edge에서 확인합니다.
+이번 단계
+- B 시안 디자인 유지
+- data/catalog.json 하나로 프로그램/LISP/웹도구/게임/앱 관리
+- 프로그램 및 LISP 무료/유료 자동 분류
+- 프로그램/LISP 상세페이지 자동 생성
+- LISP 명령어 및 AutoCAD 지원버전 표시
+- 영상 URL이 비어 있으면 영상 섹션 자동 숨김
+- 검색 및 필터 기본 동작
+- GitHub Pages 배포 가능한 정적 구조
 
-V3 주요 변경사항
-- 첫 화면 핵심 문구 개선
-- 다크 기반 Factory One 브랜드 배경 및 격자 효과
-- 캡처/이미지/엑셀 프로그램 미리보기 슬라이드
-- 쇼츠 영역을 첫 화면 바로 아래로 이동
-- 사용 전후 시간 비교 영역 추가
-- 프로그램 검색 및 분야별 필터 추가
-- 프로그램 카드 데이터를 programs.json으로 분리
-- 프로그램별 상태(출시 준비/개발 중) 표시
-- 다운로드 버튼을 출시 예정으로 변경
-- WHY FACTORY ONE 한글 줄바꿈 개선
-- PC/모바일 반응형 유지
+로컬 실행
+1. START_LOCAL_SERVER.bat 실행
+2. 브라우저에서 http://localhost:8000 접속
 
-중요
-- 실제 프로그램 캡처 이미지가 준비되면 현재 미리보기 화면을 실제 이미지 슬라이드로 교체합니다.
-- 로컬에서 index.html을 직접 열면 브라우저 보안정책상 programs.json을 불러오지 못할 수 있습니다.
-  이 경우 홈페이지는 script.js 안의 동일한 예비 데이터를 사용합니다.
-- 인터넷에 게시한 뒤에는 programs.json만 수정하여 프로그램 목록을 관리할 수 있습니다.
+새 프로그램: catalog.json items에 type=program 항목 추가
+새 LISP: type=lisp + command + cadVersions 추가
+priceType은 free 또는 paid

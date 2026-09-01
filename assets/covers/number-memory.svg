@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560">
+<rect width="900" height="560" fill="#eeece6"/>
+<rect x="30" y="30" width="840" height="500" fill="#f8f7f3" stroke="#c9c5bc"/>
+<text x="65" y="82" font-family="Arial,sans-serif" font-size="16" letter-spacing="3" fill="#77736b">FACTORY ONE · 게임</text>
+<text x="450" y="300" text-anchor="middle" font-family="Arial,sans-serif" font-size="78" font-weight="700" fill="#171717">MEMORY</text>
+<line x1="120" y1="350" x2="780" y2="350" stroke="#c4bfb5"/>
+<text x="65" y="500" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#171717">숫자 기억 게임</text>
+</svg>

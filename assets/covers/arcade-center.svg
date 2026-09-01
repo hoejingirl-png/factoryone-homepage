@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560">
+<rect width="900" height="560" fill="#171717"/><rect x="30" y="30" width="840" height="500" fill="#232323" stroke="#505050"/>
+<text x="65" y="82" font-family="Arial" font-size="16" letter-spacing="3" fill="#aaa">FACTORY ONE · ARCADE</text>
+<rect x="280" y="125" width="340" height="255" rx="12" fill="#111" stroke="#eee" stroke-width="7"/>
+<rect x="315" y="155" width="270" height="150" fill="#333"/><circle cx="380" cy="340" r="24" fill="#ddd"/>
+<circle cx="525" cy="340" r="18" fill="#ddd"/><circle cx="570" cy="340" r="18" fill="#ddd"/>
+<text x="450" y="465" text-anchor="middle" font-family="Arial" font-size="34" font-weight="700" fill="#f3f1ea">오락실 게임</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560">
+<rect width="900" height="560" fill="#171717"/>
+<rect x="30" y="30" width="840" height="500" fill="#242424" stroke="#4a4a4a"/>
+<text x="65" y="82" font-family="Arial" font-size="16" letter-spacing="3" fill="#aaa">FACTORY ONE · MOBILE GAMES</text>
+<rect x="345" y="115" width="210" height="300" rx="28" fill="none" stroke="#f1efe8" stroke-width="14"/>
+<circle cx="450" cy="380" r="10" fill="#f1efe8"/>
+<text x="450" y="475" text-anchor="middle" font-family="Arial" font-size="30" font-weight="700" fill="#f1efe8">모바일 고전게임 02</text>
+</svg>
